@@ -11,7 +11,12 @@
 
     <groupId>com.association.common</groupId>
     <artifactId>common-all</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
+<dependencies>
+    <dependency>
+        <groupId>com.association.common</groupId>
+        <artifactId>common-beans</artifactId>
+        <version>${parent.version}</version>
+    </dependency>
+</dependencies>
 
 </project>

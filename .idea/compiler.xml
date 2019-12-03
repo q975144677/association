@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="workflowiface" />
+        <module name="common-all" />
+        <module name="common-beans" />
+        <module name="common-tools" />
+        <module name="admin-parent" />
+        <module name="configandsendiface" />
+        <module name="useriface" />
+        <module name="common-log" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-parent" target="1.8" />
+      <module name="auth-parent" target="1.8" />
+      <module name="common-all" target="1.8" />
+      <module name="common-beans" target="1.8" />
+      <module name="common-log" target="1.8" />
+      <module name="common-parent" target="1.8" />
+      <module name="common-tools" target="1.8" />
+      <module name="config-parent" target="1.8" />
+      <module name="configandsendiface" target="1.8" />
+      <module name="user-parent" target="1.8" />
+      <module name="useriface" target="1.8" />
+      <module name="workflow-parent" target="1.8" />
+      <module name="workflowiface" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

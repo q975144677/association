@@ -13,7 +13,30 @@
         <module>common-beans</module>
         <module>common-all</module>
         <module>common-log</module>
+        <module>../admin-parent</module>
+        <module>../user-parent</module>
+        <module>../workflow-parent</module>
+        <module>../config-and-notification-parent</module>
     </modules>
-
+    <properties>
+        <lombok.version>1.18.10</lombok.version>
+        <spring.version>2.2.1.RELEASE</spring.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-parent</artifactId>
+                <type>pom</type>
+                <scope>import</scope>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
