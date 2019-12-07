@@ -28,8 +28,10 @@ hs_err_pid*
 /css-ticket-web-server/css-ticket-web-server.iml
 /.idea/
 /.idea/vcs.xml
+.idea/
 **/target/
 .cerberus.report
 logs
 /css-ticket-web-server/.DS_Store
 .DS_Store
+
