@@ -7,13 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="workflowiface" />
-        <module name="common-all" />
+        <module name="common-log" />
         <module name="common-beans" />
+        <module name="userserver" />
+        <module name="common-all" />
         <module name="common-tools" />
-        <module name="admin-parent" />
+        <module name="workflowservice" />
         <module name="configandsendiface" />
         <module name="useriface" />
-        <module name="common-log" />
+        <module name="configandsendserver" />
+        <module name="admin-parent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,10 +29,13 @@
       <module name="common-tools" target="1.8" />
       <module name="config-parent" target="1.8" />
       <module name="configandsendiface" target="1.8" />
+      <module name="configandsendserver" target="1.8" />
       <module name="user-parent" target="1.8" />
       <module name="useriface" target="1.8" />
+      <module name="userserver" target="1.8" />
       <module name="workflow-parent" target="1.8" />
       <module name="workflowiface" target="1.8" />
+      <module name="workflowservice" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

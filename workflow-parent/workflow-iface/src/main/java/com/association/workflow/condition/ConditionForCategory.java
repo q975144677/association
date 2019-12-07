@@ -7,8 +7,7 @@ import java.util.Date;
 
 @Data
 public class ConditionForCategory extends ConditionForPagin {
-    String guid;
+    String id;
     String name ;
-    Date createTime ;
-    Date updateTime ;
+
 }

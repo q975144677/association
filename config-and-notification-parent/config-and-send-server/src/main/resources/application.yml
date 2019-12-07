@@ -1,0 +1,10 @@
+nacos:
+  config:
+    test: 1
+    props:
+      - group: association
+        dataId: school
+      - group: association
+        dataId: category
+      - group: association
+        dataId: auth

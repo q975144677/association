@@ -1,0 +1,24 @@
+[INFO] 2019-十二月-08 00:00:19 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8e6c49dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] 2019-十二月-08 00:00:20 - Located property source: CompositePropertySource {name='NACOS', propertySources=[NacosPropertySource {name='association-config.properties'}]}
+[INFO] 2019-十二月-08 00:00:20 - No active profile set, falling back to default profiles: default
+[INFO] 2019-十二月-08 00:00:20 - Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO] 2019-十二月-08 00:00:20 - Bootstrapping Spring Data repositories in DEFAULT mode.
+[INFO] 2019-十二月-08 00:00:20 - Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
+[INFO] 2019-十二月-08 00:00:20 - BeanFactory id=6843fa83-fec4-3a76-8940-7fd55242c95f
+[INFO] 2019-十二月-08 00:00:20 - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$8e6c49dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO] 2019-十二月-08 00:00:21 - Tomcat initialized with port(s): 9092 (http)
+[INFO] 2019-十二月-08 00:00:21 - Initializing ProtocolHandler ["http-nio-9092"]
+[INFO] 2019-十二月-08 00:00:21 - Starting service [Tomcat]
+[INFO] 2019-十二月-08 00:00:21 - Starting Servlet engine: [Apache Tomcat/9.0.27]
+[INFO] 2019-十二月-08 00:00:21 - Initializing Spring embedded WebApplicationContext
+[INFO] 2019-十二月-08 00:00:21 - Root WebApplicationContext: initialization completed in 1041 ms
+[WARN] 2019-十二月-08 00:00:21 - No URLs will be polled as dynamic configuration sources.
+[INFO] 2019-十二月-08 00:00:21 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[WARN] 2019-十二月-08 00:00:21 - No URLs will be polled as dynamic configuration sources.
+[INFO] 2019-十二月-08 00:00:21 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO] 2019-十二月-08 00:00:21 - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO] 2019-十二月-08 00:00:21 - Initializing ExecutorService
+[INFO] 2019-十二月-08 00:00:22 - Starting ProtocolHandler ["http-nio-9092"]
+[INFO] 2019-十二月-08 00:00:22 - Tomcat started on port(s): 9092 (http) with context path ''
+[INFO] 2019-十二月-08 00:00:22 - nacos registry, association-config 192.168.0.105:9092 register finished
+[INFO] 2019-十二月-08 00:00:22 - Started Application in 3.706 seconds (JVM running for 5.328)

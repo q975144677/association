@@ -1,0 +1,118 @@
+Configuration:
+  status: info
+  Appenders:
+    Console:
+      name: consoleAppender
+      target: SYSTEM_OUT
+      PatternLayout:
+        Pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+    RollingFile:
+      - name: serverAppender
+        fileName: logs/server.log
+        filePattern: logs/server_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+      - name: errorAppender
+        fileName: logs/error.log
+        filePattern: logs/error_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+      - name: commonAppender
+        fileName: logs/common.log
+        filePattern: logs/common_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+      - name: requestAppender
+        fileName: logs/request.log
+        filePattern: logs/request_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+      - name: jobAppender
+        fileName: logs/job.log
+        filePattern: logs/job_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+      - name: serviceAppender
+        fileName: logs/service.log
+        filePattern: logs/service_%d{yyyy-MM-dd}.log.gz
+        PatternLayout:
+          pattern: '[%p] %d{yyyy-MMM-dd HH:mm:ss} - %m%n'
+        Policies:
+          TimeBasedTriggeringPolicy:
+            interval: 1
+            modulate: true
+  Loggers:
+    Root:
+      level: info
+      AppenderRef:
+        - ref: consoleAppender
+        - ref: serverAppender
+    Logger:
+      - name: error
+        level: error
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: errorAppender
+      - name: warn
+        level: warn
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: commonAppender
+      - name: info
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: commonAppender
+      - name: debug
+        level: debug
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: commonAppender
+      - name: common
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: commonAppender
+      - name: request
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: requestAppender
+      - name: job
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: jobAppender
+      - name: service
+        level: info
+        additivity: false
+        AppenderRef:
+          - ref: consoleAppender
+          - ref: serviceAppender

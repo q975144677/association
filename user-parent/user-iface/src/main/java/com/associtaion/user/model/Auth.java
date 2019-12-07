@@ -6,7 +6,7 @@ import java.util.List;
 @Data
 public class Auth {
     String name ;
-    String code ;
+    String id ;
     List<Auth> children ;
-    List<String> url;
+    List<String> urls;
 }

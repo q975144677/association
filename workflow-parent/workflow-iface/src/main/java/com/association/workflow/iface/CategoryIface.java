@@ -1,5 +1,6 @@
 package com.association.workflow.iface;
 
+import com.association.workflow.condition.ConditionForCategory;
 import com.association.workflow.model.CategoryDO;
 import component.Proto;
 
@@ -22,7 +23,7 @@ public interface CategoryIface {
      * 查找分类
      * 数量不多 不分页
      */
-    Proto<List<CategoryDO>> queryCategory();
+    Proto<List<CategoryDO>> queryCategory(ConditionForCategory condition);
 
     /**
      * 修改分类名

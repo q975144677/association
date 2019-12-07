@@ -1,13 +1,23 @@
 package com.association.config.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
 @Data
 public class SchoolDTO {
-    private List<School> schools ;
+    public List<Area> areas ;
+    @Setter
+    @Getter
     private static SchoolDTO instance ;
+    @Data
+    private static class Area{
+        private int code ;
+        private String name ;
+        private List<School> schools;
+    }
     @Data
     public static class School{
         private int code ;

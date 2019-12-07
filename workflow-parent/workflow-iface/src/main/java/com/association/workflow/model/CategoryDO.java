@@ -5,8 +5,6 @@ import lombok.Data;
 import java.util.Date;
 @Data
 public class CategoryDO {
-    String guid;
+    String id;
     String name ;
-    Date createTime ;
-    Date updateTime ;
 }

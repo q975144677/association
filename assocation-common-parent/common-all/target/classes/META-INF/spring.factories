@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.association.common.all.util.log.ILogger\
+  ,com.association.common.all.util.log.TestConfig
