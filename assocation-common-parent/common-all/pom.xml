@@ -22,7 +22,11 @@
             </exclusion>
         </exclusions>
     </dependency>
-    <dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <dependency>
         <groupId>com.association.common</groupId>
         <artifactId>common-beans</artifactId>
         <version>${parent.version}</version>

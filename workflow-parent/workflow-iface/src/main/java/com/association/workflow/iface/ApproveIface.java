@@ -4,7 +4,7 @@ import com.association.workflow.condition.ConditionForApprove;
 import com.association.workflow.model.ApproveDO;
 import component.PaginProto;
 import component.Proto;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;

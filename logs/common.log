@@ -3501,3 +3501,4547 @@ school - areas:
         name: 浙江大学
       - code: 7
         name: 杭州大学
+[INFO] 2019-十二月-08 00:37:34 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:37:34 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:38:03 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:38:03 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:38:33 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:38:33 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:39:02 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:39:02 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:39:32 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:39:32 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:40:01 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:40:01 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:40:31 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:40:31 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:41:00 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:41:00 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:41:30 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:41:30 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:41:59 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:41:59 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:42:29 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:42:29 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:42:58 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:42:58 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:43:28 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:43:28 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:43:57 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:43:57 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:44:27 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:44:27 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:44:56 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:44:56 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:45:26 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:45:26 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:45:55 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:45:55 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:46:25 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:46:25 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:46:54 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:46:54 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:47:24 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:47:24 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:47:53 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:47:53 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:48:23 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:48:23 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:48:52 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:48:52 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:49:22 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:49:22 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:49:51 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:49:51 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:50:21 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:50:21 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:50:50 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:50:50 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:51:20 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:51:20 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:51:49 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:51:49 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:52:19 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:52:19 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:52:48 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:52:48 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:53:18 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:53:18 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:53:47 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:53:47 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:54:17 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:54:17 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:54:46 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:54:46 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:55:16 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:55:16 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:55:45 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:55:45 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:56:15 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:56:15 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:56:44 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:56:44 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:57:14 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:57:14 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:57:43 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:57:43 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:58:13 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:58:13 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:58:42 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:58:42 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:59:12 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 00:59:12 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:59:41 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 00:59:41 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:00:11 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:00:11 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:00:40 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:00:40 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:01:10 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:01:10 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:01:39 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:01:39 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:02:09 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:02:09 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:02:38 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:02:38 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:03:08 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:03:08 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:03:37 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:03:37 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:04:07 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:04:07 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:04:36 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:04:36 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:05:06 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:05:06 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:05:35 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:05:35 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:06:05 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:06:05 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:06:35 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:06:35 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:07:04 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:07:04 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:07:34 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:07:34 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:08:03 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:08:03 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:08:33 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:08:33 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:09:02 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:09:02 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:09:32 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:09:32 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:10:01 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:10:01 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:10:31 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:10:31 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:11:00 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:11:00 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:11:30 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:11:30 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:11:59 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:11:59 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:12:29 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:12:29 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:12:58 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:12:58 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:13:28 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:13:28 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:13:57 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:13:57 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:14:27 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:14:27 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:14:56 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:14:56 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:15:26 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:15:26 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:15:55 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:15:55 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:16:25 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:16:25 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:16:54 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:16:54 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:17:24 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:17:24 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:17:53 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:17:53 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:18:23 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:18:23 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:18:52 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:18:52 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:19:22 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:19:22 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:19:51 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:19:51 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:20:21 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:20:21 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:20:50 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:20:50 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:21:20 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:21:20 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:21:49 - nacos renew : 
+school - areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:21:49 - nacos renew : 
+auth - auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:22:47 - application starting...
+[INFO] 2019-十二月-08 01:23:24 - application starting...
+[INFO] 2019-十二月-08 01:23:27 - loading nacos...
+[INFO] 2019-十二月-08 01:23:27 - loading category
+[INFO] 2019-十二月-08 01:23:27 - YAML CONTENT : 
+categories:
+  - code: 1 
+    name: 学术研究
+  - code: 2
+    name: 体育运动
+  - code: 3 
+    name: 艺术造诣
+  - code: 4 
+    name: 兴趣爱好
+  - code: 5
+    name: 古典文学
+  - code: 6
+    name: 其他
+[INFO] 2019-十二月-08 01:23:27 - parse start...
+[INFO] 2019-十二月-08 01:23:27 - parse end...
+[INFO] 2019-十二月-08 01:23:27 - load end : CategoryDTO(categories=[CategoryDTO.Category(code=1, name=学术研究), CategoryDTO.Category(code=2, name=体育运动), CategoryDTO.Category(code=3, name=艺术造诣), CategoryDTO.Category(code=4, name=兴趣爱好), CategoryDTO.Category(code=5, name=古典文学), CategoryDTO.Category(code=6, name=其他)])
+[INFO] 2019-十二月-08 01:23:27 - loading auth
+[INFO] 2019-十二月-08 01:23:27 - YAML CONTENT : 
+auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:23:27 - parse start...
+[INFO] 2019-十二月-08 01:23:27 - load end : AuthDTO(auth=null)
+[INFO] 2019-十二月-08 01:23:27 - loading school
+[INFO] 2019-十二月-08 01:23:27 - YAML CONTENT : 
+areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:23:27 - parse start...
+[INFO] 2019-十二月-08 01:23:27 - parse end...
+[INFO] 2019-十二月-08 01:23:27 - load end : SchoolDTO(areas=[SchoolDTO.Area(code=1, name=上海, schools=[SchoolDTO.School(code=1, name=上海电力大学), SchoolDTO.School(code=2, name=上海大学), SchoolDTO.School(code=3, name=上海还行大学)]), SchoolDTO.Area(code=2, name=北京, schools=[SchoolDTO.School(code=4, name=北京大学), SchoolDTO.School(code=5, name=清华大学)]), SchoolDTO.Area(code=3, name=浙江, schools=[SchoolDTO.School(code=6, name=浙江大学), SchoolDTO.School(code=7, name=杭州大学)])])
+[INFO] 2019-十二月-08 01:23:27 - load end...
+[INFO] 2019-十二月-08 01:23:27 - application started...
+[INFO] 2019-十二月-08 01:23:35 - application starting...
+[INFO] 2019-十二月-08 01:25:44 - application starting...
+[INFO] 2019-十二月-08 01:25:47 - method : configUtil starting...
+[INFO] 2019-十二月-08 01:25:47 - method : getServerAddress starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:25:47 - method : getTest starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:25:47 - method : getBotest starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:25:47 - method : getProps starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:25:47 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:25:47 - method : toString starting...
+[INFO] 2019-十二月-08 01:25:47 - requestJson : []
+[INFO] 2019-十二月-08 01:26:42 - application starting...
+[INFO] 2019-十二月-08 01:26:46 - loading nacos...
+[INFO] 2019-十二月-08 01:26:46 - loading category
+[INFO] 2019-十二月-08 01:26:46 - YAML CONTENT : 
+categories:
+  - code: 1 
+    name: 学术研究
+  - code: 2
+    name: 体育运动
+  - code: 3 
+    name: 艺术造诣
+  - code: 4 
+    name: 兴趣爱好
+  - code: 5
+    name: 古典文学
+  - code: 6
+    name: 其他
+[INFO] 2019-十二月-08 01:26:46 - parse start...
+[INFO] 2019-十二月-08 01:26:46 - parse end...
+[INFO] 2019-十二月-08 01:26:46 - load end : CategoryDTO(categories=[CategoryDTO.Category(code=1, name=学术研究), CategoryDTO.Category(code=2, name=体育运动), CategoryDTO.Category(code=3, name=艺术造诣), CategoryDTO.Category(code=4, name=兴趣爱好), CategoryDTO.Category(code=5, name=古典文学), CategoryDTO.Category(code=6, name=其他)])
+[INFO] 2019-十二月-08 01:26:46 - loading auth
+[INFO] 2019-十二月-08 01:26:46 - YAML CONTENT : 
+auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:26:46 - parse start...
+[INFO] 2019-十二月-08 01:26:46 - load end : AuthDTO(auth=null)
+[INFO] 2019-十二月-08 01:26:46 - loading school
+[INFO] 2019-十二月-08 01:26:46 - YAML CONTENT : 
+areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:26:46 - parse start...
+[INFO] 2019-十二月-08 01:26:46 - parse end...
+[INFO] 2019-十二月-08 01:26:46 - load end : SchoolDTO(areas=[SchoolDTO.Area(code=1, name=上海, schools=[SchoolDTO.School(code=1, name=上海电力大学), SchoolDTO.School(code=2, name=上海大学), SchoolDTO.School(code=3, name=上海还行大学)]), SchoolDTO.Area(code=2, name=北京, schools=[SchoolDTO.School(code=4, name=北京大学), SchoolDTO.School(code=5, name=清华大学)]), SchoolDTO.Area(code=3, name=浙江, schools=[SchoolDTO.School(code=6, name=浙江大学), SchoolDTO.School(code=7, name=杭州大学)])])
+[INFO] 2019-十二月-08 01:26:46 - load end...
+[INFO] 2019-十二月-08 01:26:46 - application started...
+[INFO] 2019-十二月-08 01:27:50 - application starting...
+[INFO] 2019-十二月-08 01:27:53 - method : configUtil starting...
+[INFO] 2019-十二月-08 01:27:53 - method : getServerAddress starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : getServerAddress end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : getTest starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : getTest end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : getBotest starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : getBotest end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : getProps starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : getProps end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : toString starting...
+[INFO] 2019-十二月-08 01:27:53 - requestJson : []
+[INFO] 2019-十二月-08 01:27:53 - method : toString end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:27:53 - method : configUtil end...
+[INFO] 2019-十二月-08 01:27:53 - responseJson : null
+[INFO] 2019-十二月-08 01:29:31 - application starting...
+[INFO] 2019-十二月-08 01:29:34 - method : configUtil starting...
+[INFO] 2019-十二月-08 01:29:34 - method : getServerAddress starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getServerAddress end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "127.0.0.1:8848"
+[INFO] 2019-十二月-08 01:29:34 - method : getTest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getTest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "1"
+[INFO] 2019-十二月-08 01:29:34 - method : getBotest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getBotest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "2"
+[INFO] 2019-十二月-08 01:29:34 - method : getProps starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getProps end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : [{"group":"association","dataId":"school"},{"group":"association","dataId":"category"},{"group":"association","dataId":"auth"}]
+[INFO] 2019-十二月-08 01:29:34 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : null
+[INFO] 2019-十二月-08 01:29:34 - method : toString starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : toString end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "ConfigUtil(serverAddress=127.0.0.1:8848, test=1, botest=2, props=[ConfigUtil.Prop(group=association, dataId=school), ConfigUtil.Prop(group=association, dataId=category), ConfigUtil.Prop(group=association, dataId=auth)], configService=null)"
+[INFO] 2019-十二月-08 01:29:34 - method : configUtil end...
+[INFO] 2019-十二月-08 01:29:34 - method : getServerAddress starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getServerAddress end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "127.0.0.1:8848"
+[INFO] 2019-十二月-08 01:29:34 - method : getTest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getTest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "1"
+[INFO] 2019-十二月-08 01:29:34 - method : getBotest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getBotest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : "2"
+[INFO] 2019-十二月-08 01:29:34 - method : getProps starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getProps end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : [{"group":"association","dataId":"school"},{"group":"association","dataId":"category"},{"group":"association","dataId":"auth"}]
+[INFO] 2019-十二月-08 01:29:34 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:34 - method : setTest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : ["1"]
+[INFO] 2019-十二月-08 01:29:34 - method : setTest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : null
+[INFO] 2019-十二月-08 01:29:34 - method : getProps starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : []
+[INFO] 2019-十二月-08 01:29:34 - method : getProps end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : [{"group":"association","dataId":"school"},{"group":"association","dataId":"category"},{"group":"association","dataId":"auth"}]
+[INFO] 2019-十二月-08 01:29:34 - method : setProps starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : [[{"group":"association","dataId":"school"},{"group":"association","dataId":"category"},{"group":"association","dataId":"auth"}]]
+[INFO] 2019-十二月-08 01:29:34 - method : setProps end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : null
+[INFO] 2019-十二月-08 01:29:34 - method : setBotest starting...
+[INFO] 2019-十二月-08 01:29:34 - requestJson : ["2"]
+[INFO] 2019-十二月-08 01:29:34 - method : setBotest end...
+[INFO] 2019-十二月-08 01:29:34 - responseJson : null
+[INFO] 2019-十二月-08 01:29:35 - method : onApplicationEvent starting...
+[INFO] 2019-十二月-08 01:29:35 - loading nacos...
+[INFO] 2019-十二月-08 01:29:35 - loading category
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - YAML CONTENT : 
+categories:
+  - code: 1 
+    name: 学术研究
+  - code: 2
+    name: 体育运动
+  - code: 3 
+    name: 艺术造诣
+  - code: 4 
+    name: 兴趣爱好
+  - code: 5
+    name: 古典文学
+  - code: 6
+    name: 其他
+[INFO] 2019-十二月-08 01:29:35 - parse start...
+[INFO] 2019-十二月-08 01:29:35 - parse end...
+[INFO] 2019-十二月-08 01:29:35 - load end : CategoryDTO(categories=[CategoryDTO.Category(code=1, name=学术研究), CategoryDTO.Category(code=2, name=体育运动), CategoryDTO.Category(code=3, name=艺术造诣), CategoryDTO.Category(code=4, name=兴趣爱好), CategoryDTO.Category(code=5, name=古典文学), CategoryDTO.Category(code=6, name=其他)])
+[INFO] 2019-十二月-08 01:29:35 - loading auth
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - YAML CONTENT : 
+auth:
+  - id: A
+    name: 未注册用户
+    urls: 
+      - /mainPage/*
+    children:
+      - id: A2
+        name: 普通用户
+        urls:
+          - /users/*
+          - -/admin/* # 代表不能进去admin 相关页面
+  - id: B
+    name: 教师
+    urls:
+     - /*
+     - -/admin/*
+  - id: C
+    name: 超级管理员
+    urls: 
+     - /*
+[INFO] 2019-十二月-08 01:29:35 - parse start...
+[INFO] 2019-十二月-08 01:29:35 - load end : AuthDTO(auth=null)
+[INFO] 2019-十二月-08 01:29:35 - loading school
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService starting...
+[INFO] 2019-十二月-08 01:29:35 - requestJson : []
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - method : getConfigService end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : {"serverStatus":"UP"}
+[INFO] 2019-十二月-08 01:29:35 - YAML CONTENT : 
+areas: 
+  - code: 1 
+    name: 上海
+    schools: 
+      - code: 1
+        name: 上海电力大学
+      - code: 2 
+        name: 上海大学
+      - code: 3 
+        name: 上海还行大学
+  - code: 2 
+    name: 北京
+    schools: 
+      - code: 4
+        name: 北京大学
+      - code: 5 
+        name: 清华大学
+  - code: 3 
+    name: 浙江
+    schools: 
+      - code: 6
+        name: 浙江大学
+      - code: 7
+        name: 杭州大学
+[INFO] 2019-十二月-08 01:29:35 - parse start...
+[INFO] 2019-十二月-08 01:29:35 - parse end...
+[INFO] 2019-十二月-08 01:29:35 - load end : SchoolDTO(areas=[SchoolDTO.Area(code=1, name=上海, schools=[SchoolDTO.School(code=1, name=上海电力大学), SchoolDTO.School(code=2, name=上海大学), SchoolDTO.School(code=3, name=上海还行大学)]), SchoolDTO.Area(code=2, name=北京, schools=[SchoolDTO.School(code=4, name=北京大学), SchoolDTO.School(code=5, name=清华大学)]), SchoolDTO.Area(code=3, name=浙江, schools=[SchoolDTO.School(code=6, name=浙江大学), SchoolDTO.School(code=7, name=杭州大学)])])
+[INFO] 2019-十二月-08 01:29:35 - load end...
+[INFO] 2019-十二月-08 01:29:35 - method : onApplicationEvent end...
+[INFO] 2019-十二月-08 01:29:35 - responseJson : null
+[INFO] 2019-十二月-08 01:29:35 - application started...

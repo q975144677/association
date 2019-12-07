@@ -6,36 +6,35 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="workflowiface" />
+        <module name="config-and-send-server" />
         <module name="common-log" />
+        <module name="user-iface" />
         <module name="common-beans" />
-        <module name="userserver" />
+        <module name="workflow-service" />
+        <module name="config-and-send-iface" />
         <module name="common-all" />
+        <module name="workflow-iface" />
         <module name="common-tools" />
-        <module name="workflowservice" />
-        <module name="configandsendiface" />
-        <module name="useriface" />
-        <module name="configandsendserver" />
+        <module name="user-server" />
         <module name="admin-parent" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-parent" target="1.8" />
-      <module name="auth-parent" target="1.8" />
       <module name="common-all" target="1.8" />
       <module name="common-beans" target="1.8" />
       <module name="common-log" target="1.8" />
       <module name="common-parent" target="1.8" />
       <module name="common-tools" target="1.8" />
+      <module name="config-and-send-iface" target="1.8" />
+      <module name="config-and-send-server" target="1.8" />
       <module name="config-parent" target="1.8" />
-      <module name="configandsendiface" target="1.8" />
-      <module name="configandsendserver" target="1.8" />
+      <module name="user-iface" target="1.8" />
       <module name="user-parent" target="1.8" />
-      <module name="useriface" target="1.8" />
-      <module name="userserver" target="1.8" />
+      <module name="user-server" target="1.8" />
+      <module name="workflow-iface" target="1.8" />
       <module name="workflow-parent" target="1.8" />
-      <module name="workflowiface" target="1.8" />
-      <module name="workflowservice" target="1.8" />
+      <module name="workflow-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

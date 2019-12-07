@@ -13,11 +13,11 @@ public class ILogger {
     public static ILogger getInstance(){
         return new ILogger();
     }
-    Logger info = LoggerFactory.getLogger("info");
-    Logger error = LoggerFactory.getLogger("error");
-    Logger debug = LoggerFactory.getLogger("debug");
-    Logger common = LoggerFactory.getLogger("common");
-    Logger warn = LoggerFactory.getLogger("warn");
+    private Logger info = LoggerFactory.getLogger("info");
+    private Logger error = LoggerFactory.getLogger("error");
+    private Logger debug = LoggerFactory.getLogger("debug");
+    private Logger common = LoggerFactory.getLogger("common");
+    private Logger warn = LoggerFactory.getLogger("warn");
 
     {
         if (info == null) {
