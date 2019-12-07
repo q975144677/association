@@ -19,6 +19,8 @@ hs_err_pid*
 /.idea/
 /.idea/vcs.xml
 .idea/
+.idea/sonarlint/*/*
+.idea/sonarlint/
 **/target/
 .cerberus.report
 logs
