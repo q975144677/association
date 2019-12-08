@@ -9,6 +9,13 @@ spring:
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml
-  type-aliases-package: com.association.workflow.mapper
+  type-aliases-package: com.association.user.model
   configuration:
     map-underscore-to-camel-case: true
+
+user:
+  token:
+    life: 14
+    unit: DAYS
+role:
+  common: 1234 # todo 修改为普通用户guid

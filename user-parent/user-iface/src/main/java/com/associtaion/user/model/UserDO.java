@@ -9,7 +9,7 @@ public class UserDO {
 String guid;
 String name ;
 String roleGuid ;
-String schoolGuid ;
+String schoolId ;
 String username ;
 String password;
 String mobilePhone ;

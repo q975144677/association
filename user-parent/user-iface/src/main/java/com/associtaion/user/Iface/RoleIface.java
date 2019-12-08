@@ -1,8 +1,9 @@
 package com.associtaion.user.Iface;
 
+import com.associtaion.user.model.AuthDTO;
 import com.associtaion.user.model.RoleDO;
 import component.Proto;
-import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public interface RoleIface {
     Proto<List<String>> getUrlsByRole(RoleDO role);
 
     @RequestMapping("user/getRoleTree")
-    Proto<RoleDO> getRoleTree();
+    Proto<AuthDTO> getRoleTree();
 
     @RequestMapping("user/updateRole")
     Proto<Boolean> updateRole(RoleDO role);

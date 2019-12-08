@@ -1,4 +1,4 @@
-package com.association.workflow.util;
+package com.association.user.component;
 
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -36,8 +36,9 @@ public class RedisLock {
         }
     }
     private String luaScript(){
-        return "local key = '" + key + "'; "
-                + "local ok = redis.call('setnx',key,1);"
+        return "local key = '" + key + "'; " +
+                "local value = '" + randomValue + "'"
+                + "local ok = redis.call('setnx',key,value);"
                 + "if ok == 1 then redis.call('expire', key, " + timeout + "); end;"
                 + "return ok;";
     }

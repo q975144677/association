@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.association.user.mapper.UserMapper">
+    <insert id="createNewUser">
+        INSERT INTO
+        user
+        (
+        guid,
+        name,
+        role_guid,
+        school_id,
+        username,
+        password,
+        mobile_phone,
+        create_time,
+        update_time
+        )
+        VALUES(
+            replace(uuid(),'-',''),
+            #{condition.name},
+            #{condition.roleGuid},
+            #{condition.schoolId},
+            #{condition.username},
+            #{condition.password},
+            #{condition.mobilePhone},
+            now(),
+            now()
+        )
+    </insert>
+    <update id="updateUser">
+        UPDATE user
+        <set>
+            <if test="condition.name != null">
+                name = #{condition.name},
+            </if>
+            <if test="condition.mobile_phone != null">
+                mobile_phone = #{condition.mobilePhone},
+            </if>
+            <if test="condition.roleGuid != null">
+                role_guid = #{condition.roleGuid},
+            </if>
+            <if test="condition.password != null">
+                password = #{condition.password},
+            </if>
+            <if test="condition.schoolId != null">
+                school_id = #{condition.schoolId},
+            </if>
+            update_time = now()
+        </set>
+        <where>
+            guid =#{condition.guid}
+        </where>
+    </update>
+
+
+    <select id="queryUsers" resultType="com.associtaion.user.model.UserDO">
+        SELECT *
+        -- 偷懒了 不应当是 *
+        FROM user
+        <where>
+            <if test="condition.name != null">
+                and name = #{condition.name}
+            </if>
+            <if test="condition.mobile_phone != null">
+                and mobile_phone = #{condition.mobilePhone}
+            </if>
+            <if test="condition.roleGuid != null">
+                and role_guid = #{condition.roleGuid}
+            </if>
+            <if test="condition.password != null">
+                and password = #{condition.password}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.from != null and condition.to != null">
+                and create_time > #{condition.from}
+                and create_time &lt; #{condition.to}
+            </if>
+        </where>
+            ORDER BY create_time desc
+            limit #{offset} , #{limit}
+    </select>
+    <select id="countUsers" resultType="java.lang.Long">
+        SELECT count (1)
+        -- 偷懒了 不应当是 *
+        FROM user
+        <where>
+            <if test="condition.name != null">
+                and name = #{condition.name}
+            </if>
+            <if test="condition.mobile_phone != null">
+                and mobile_phone = #{condition.mobilePhone}
+            </if>
+            <if test="condition.roleGuid != null">
+                and role_guid = #{condition.roleGuid}
+            </if>
+            <if test="condition.password != null">
+                and password = #{condition.password}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.from != null and condition.to != null">
+                and create_time > #{condition.from}
+                and create_time &lt; #{condition.to}
+            </if>
+        </where>
+    </select>
+    <select id="getUser" resultType="com.associtaion.user.model.UserDO">
+        SELECT *
+        -- 偷懒了 不应当是 *
+        FROM user
+        <where>
+            <if test="condition.name != null">
+                and name = #{condition.name}
+            </if>
+            <if test="condition.mobile_phone != null">
+                and mobile_phone = #{condition.mobilePhone}
+            </if>
+            <if test="condition.roleGuid != null">
+                and role_guid = #{condition.roleGuid}
+            </if>
+            <if test="condition.password != null">
+                and password = #{condition.password}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.from != null and condition.to != null">
+                and create_time > #{condition.from}
+                and create_time &lt; #{condition.to}
+            </if>
+        </where>
+        LIMIT 1
+    </select>
+</mapper>

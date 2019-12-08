@@ -8,7 +8,7 @@ public class ConditionForUser extends ConditionForPagin {
     String guid;
     String name ;
     String roleGuid ;
-    String schoolGuid ;
+    String schoolId ;
     String username ;
     String password;
 }
