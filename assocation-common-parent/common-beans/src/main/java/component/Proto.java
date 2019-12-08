@@ -29,6 +29,14 @@ public class Proto<T> {
         return proto;
     }
     public static <T> Proto<T> fail(){
-        return new Proto<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),null);
+        return new Proto<>(HttpStatus.OK.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),null);
+    }
+    public static <T> Proto<T> fail(T t){
+        return new Proto<>(HttpStatus.OK.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),t);
+    }
+
+    public static Proto fail(String msg){
+        return new Proto<>(HttpStatus.OK.value(),msg,null);
     }
 }
+
