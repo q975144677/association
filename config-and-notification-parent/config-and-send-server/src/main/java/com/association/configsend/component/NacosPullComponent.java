@@ -1,5 +1,6 @@
 package com.association.configsend.component;
 
+import com.alibaba.fastjson.JSONObject;
 import com.alibaba.nacos.api.config.listener.Listener;
 import com.alibaba.nacos.api.exception.NacosException;
 import com.association.common.all.util.log.ILogger;
@@ -12,6 +13,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLParser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
@@ -133,7 +135,7 @@ public class NacosPullComponent implements ApplicationListener<ApplicationReadyE
             logger.info("parse end...");
             return t ;
         } catch (IOException e) {
-            logger.error("parse error...");
+            logger.error("parse error : {}" , e.getMessage());
 //            e.printStackTrace();
         }
         try {
@@ -150,32 +152,32 @@ public class NacosPullComponent implements ApplicationListener<ApplicationReadyE
         YAMLFactory yamlFactory = new YAMLFactory();
         YAMLParser parser = null;
         try {
-            String content = "areas: \n" +
-                    "  - code: 1 \n" +
-                    "    name: 上海\n" +
-                    "    schools: \n" +
-                    "      - code: 1\n" +
-                    "        name: 上海电力大学\n" +
-                    "      - code: 2 \n" +
-                    "        name: 上海大学\n" +
-                    "      - code: 3 \n" +
-                    "        name: 上海还行大学\n" +
-                    "  - code: 2 \n" +
-                    "    name: 北京\n" +
-                    "    schools: \n" +
-                    "      - code: 4\n" +
-                    "        name: 北京大学\n" +
-                    "      - code: 5 \n" +
-                    "        name: 清华大学\n" +
-                    "  - code: 3 \n" +
-                    "    name: 浙江\n" +
-                    "    schools: \n" +
-                    "      - code: 6\n" +
-                    "        name: 浙江大学";
+            String content = "auth:\n" +
+                    "  - id: A\n" +
+                    "    name: 未注册用户\n" +
+                    "    urls: \n" +
+                    "      - /mainPage/*\n" +
+                    "    children:\n" +
+                    "      - id: A2\n" +
+                    "        name: 普通用户\n" +
+                    "        urls:\n" +
+                    "          - /users/*\n" +
+                    "          - -/admin/* # 代表不能进去admin 相关页面\n" +
+                    "  - id: B\n" +
+                    "    name: 教师\n" +
+                    "    urls:\n" +
+                    "     - /*\n" +
+                    "     - -/admin/*\n" +
+                    "  - id: C\n" +
+                    "    name: 超级管理员\n" +
+                    "    urls: \n" +
+                    "     - /*";
+            YAMLMapper mapper1 = new YAMLMapper();
+            System.out.println(            mapper1.readValue(content,AuthDTO.class));
             parser = yamlFactory.createParser(content);
             Yaml yaml = new Yaml();
             TreeNode node = mapper.readTree(parser);
-            SchoolDTO dto = mapper.treeToValue(node, SchoolDTO.class);
+            AuthDTO dto = mapper.treeToValue(node, AuthDTO.class);
             System.out.println(mapper.writeValueAsString(dto));
             System.out.println(mapper.writeValueAsString(
                     yaml.loadAs(content, SchoolDTO.class)));

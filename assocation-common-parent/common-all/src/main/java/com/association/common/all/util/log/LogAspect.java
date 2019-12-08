@@ -1,5 +1,6 @@
 package com.association.common.all.util.log;
 
+import com.alibaba.fastjson.JSONObject;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.aspectj.lang.JoinPoint;
@@ -10,6 +11,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.weaver.Advice;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 // 定义切面注解 并 纳入springboot 管理进行自动配置
@@ -18,7 +20,8 @@ import org.springframework.stereotype.Component;
 public class LogAspect {
     // 自己的日志类
     ILogger logger = new ILogger();
-
+@Autowired
+LoggerConfiguration loggerConfiguration;
     //切面定义
     @Pointcut("(within(com.association..*)) && !(within(com.association.common.all.util.log.*)) ")
     public void advice() {
@@ -32,8 +35,7 @@ public class LogAspect {
         }
         Throwable trw = null;
         try {
-            logger.info("method : {} starting...", pjp.getSignature().getName());
-            logger.info("requestJson : {}", new ObjectMapper().writeValueAsString(pjp.getArgs()));
+            logger.info("appName : {} ; method : {} ; requestJson : {}", loggerConfiguration.getAppName() , pjp.getSignature().getName() , JSONObject.toJSONString(pjp.getArgs()));
         } catch (Exception e) {
             //do nothing
             logger.error("maybe method is null ?");
@@ -56,8 +58,8 @@ public class LogAspect {
             logger.info("aop error \n maybe cut the logger class ?");
         }
         try {
-            logger.info("responseJson : {}", new ObjectMapper().writeValueAsString(result));
-        } catch (JsonProcessingException e) {
+            logger.info("appName : {} ; method : {} ; responseJson : {}", loggerConfiguration.getAppName() , jp.getSignature().getName() , JSONObject.toJSONString(jp.getArgs()));
+        } catch (Exception e) {
             logger.error("parse result error : {}", e.getMessage());
         }
     }

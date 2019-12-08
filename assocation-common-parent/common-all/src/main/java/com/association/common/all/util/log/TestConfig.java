@@ -10,7 +10,7 @@ public class TestConfig {
 
     @Bean
     @Primary
-    public TestConfig testConfig() {
+    public TestConfig testConfisg() {
         TestConfig config = new TestConfig();
         config.i = 1;
         return config;

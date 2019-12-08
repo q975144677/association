@@ -12,5 +12,5 @@ public class AuthDTO {
     @Getter
     @Setter
     private static AuthDTO instance ;
-    private Auth auth ;
+    private List<Auth> auth ;
 }
