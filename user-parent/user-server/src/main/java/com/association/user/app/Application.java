@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import java.util.logging.Logger;
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = "com.association")
 @ComponentScan(basePackages = {"com.association.user"})
 @SpringBootApplication
 @MapperScan(basePackages = {"com.association.user.mapper"})

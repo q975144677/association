@@ -33,7 +33,7 @@
             <if test="condition.name != null">
                 name = #{condition.name},
             </if>
-            <if test="condition.mobile_phone != null">
+            <if test="condition.mobilePhone != null">
                 mobile_phone = #{condition.mobilePhone},
             </if>
             <if test="condition.roleGuid != null">
@@ -45,6 +45,9 @@
             <if test="condition.schoolId != null">
                 school_id = #{condition.schoolId},
             </if>
+            <if test="condition.avatar != null">
+                avatar = #{condition.avatar},
+            </if>
             update_time = now()
         </set>
         <where>
@@ -53,23 +56,26 @@
     </update>
 
 
-    <select id="queryUsers" resultType="com.associtaion.user.model.UserDO">
+    <select id="queryUsers" resultType="com.association.user.model.UserDO">
         SELECT *
         -- 偷懒了 不应当是 *
         FROM user
         <where>
+            <if test="condition.username != null">
+                and username = #{condition.username}
+            </if>
             <if test="condition.name != null">
                 and name = #{condition.name}
             </if>
-            <if test="condition.mobile_phone != null">
+            <if test="condition.mobilePhone != null">
                 and mobile_phone = #{condition.mobilePhone}
             </if>
             <if test="condition.roleGuid != null">
                 and role_guid = #{condition.roleGuid}
             </if>
-            <if test="condition.password != null">
-                and password = #{condition.password}
-            </if>
+            <!--            <if test="condition.password != null">-->
+            <!--                and password = #{condition.password}-->
+            <!--            </if>-->
             <if test="condition.schoolId != null">
                 and school_id = #{condition.schoolId}
             </if>
@@ -78,26 +84,28 @@
                 and create_time &lt; #{condition.to}
             </if>
         </where>
-            ORDER BY create_time desc
-            limit #{offset} , #{limit}
+        ORDER BY create_time desc
+        limit #{offset} , #{limit}
     </select>
     <select id="countUsers" resultType="java.lang.Long">
         SELECT count (1)
-        -- 偷懒了 不应当是 *
         FROM user
         <where>
+            <if test="condition.username != null">
+                and username = #{condition.username}
+            </if>
             <if test="condition.name != null">
                 and name = #{condition.name}
             </if>
-            <if test="condition.mobile_phone != null">
+            <if test="condition.mobilePhone != null">
                 and mobile_phone = #{condition.mobilePhone}
             </if>
             <if test="condition.roleGuid != null">
                 and role_guid = #{condition.roleGuid}
             </if>
-            <if test="condition.password != null">
-                and password = #{condition.password}
-            </if>
+            <!--            <if test="condition.password != null">-->
+            <!--                and password = #{condition.password}-->
+            <!--            </if>-->
             <if test="condition.schoolId != null">
                 and school_id = #{condition.schoolId}
             </if>
@@ -107,23 +115,29 @@
             </if>
         </where>
     </select>
-    <select id="getUser" resultType="com.associtaion.user.model.UserDO">
+    <select id="getUser" resultType="com.association.user.model.UserDO">
         SELECT *
         -- 偷懒了 不应当是 *
         FROM user
         <where>
+        <if test="condition.guid != null">
+            and guid = #{condition.guid}
+        </if>
+            <if test="condition.username != null">
+                and username = #{condition.username}
+            </if>
             <if test="condition.name != null">
                 and name = #{condition.name}
             </if>
-            <if test="condition.mobile_phone != null">
+            <if test="condition.mobilePhone != null">
                 and mobile_phone = #{condition.mobilePhone}
             </if>
             <if test="condition.roleGuid != null">
                 and role_guid = #{condition.roleGuid}
             </if>
-            <if test="condition.password != null">
-                and password = #{condition.password}
-            </if>
+            <!--            <if test="condition.password != null">-->
+            <!--                and password = #{condition.password}-->
+            <!--            </if>-->
             <if test="condition.schoolId != null">
                 and school_id = #{condition.schoolId}
             </if>
@@ -133,5 +147,32 @@
             </if>
         </where>
         LIMIT 1
+    </select>
+    <select id="getUsers" resultType="com.association.user.model.UserDO">
+        SELECT *
+        -- 偷懒了 不应当是 *
+        FROM user
+        <where>
+            <if test="condition.name != null">
+                and name = #{condition.name}
+            </if>
+            <if test="condition.mobilePhone != null">
+                and mobile_phone = #{condition.mobilePhone}
+            </if>
+            <if test="condition.roleGuid != null">
+                and role_guid = #{condition.roleGuid}
+            </if>
+            <!--            <if test="condition.password != null">-->
+            <!--                and password = #{condition.password}-->
+            <!--            </if>-->
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.from != null and condition.to != null">
+                and create_time > #{condition.from}
+                and create_time &lt; #{condition.to}
+            </if>
+        </where>
+        LIMIT #{condition.offset} #{condition.limit}
     </select>
 </mapper>

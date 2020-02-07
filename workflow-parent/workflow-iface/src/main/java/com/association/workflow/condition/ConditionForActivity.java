@@ -28,5 +28,7 @@ public class ConditionForActivity extends ConditionForPagin {
     private Integer payType;
     private Integer approveStatus;
     private String associationGuid;
+    //todo
     private List<String> associationGuids;
+    private List<String> activityGuids ;
 }

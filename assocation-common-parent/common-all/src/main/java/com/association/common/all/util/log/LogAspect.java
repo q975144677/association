@@ -20,8 +20,9 @@ import org.springframework.stereotype.Component;
 public class LogAspect {
     // 自己的日志类
     ILogger logger = new ILogger();
-@Autowired
-LoggerConfiguration loggerConfiguration;
+    @Autowired
+    LoggerConfiguration loggerConfiguration;
+
     //切面定义
     @Pointcut("(within(com.association..*)) && !(within(com.association.common.all.util.log.*)) ")
     public void advice() {
@@ -35,7 +36,7 @@ LoggerConfiguration loggerConfiguration;
         }
         Throwable trw = null;
         try {
-            logger.info("appName : {} ; method : {} ; requestJson : {}", loggerConfiguration.getAppName() , pjp.getSignature().getName() , JSONObject.toJSONString(pjp.getArgs()));
+            logger.info("appName : {} ; method : {} ; requestJson : {}", loggerConfiguration.getAppName(), pjp.getSignature().getName(), JSONObject.toJSONString(pjp.getArgs()));
         } catch (Exception e) {
             //do nothing
             logger.error("maybe method is null ?");
@@ -58,7 +59,7 @@ LoggerConfiguration loggerConfiguration;
             logger.info("aop error \n maybe cut the logger class ?");
         }
         try {
-            logger.info("appName : {} ; method : {} ; responseJson : {}", loggerConfiguration.getAppName() , jp.getSignature().getName() , JSONObject.toJSONString(jp.getArgs()));
+            logger.info("appName : {} ; method : {} ; responseJson : {}", loggerConfiguration.getAppName(), jp.getSignature().getName(), JSONObject.toJSONString(result));
         } catch (Exception e) {
             logger.error("parse result error : {}", e.getMessage());
         }

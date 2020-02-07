@@ -3,4 +3,73 @@
 <mapper namespace="com.association.workflow.mapper.AssociationMapper">
 
 
+    <insert id="createNewAssociation">
+        INSERT into
+        association(
+        guid,
+        name ,
+        sub_content ,
+        avatar_url ,
+        create_time ,
+        update_time ,
+        create_user_guid ,
+        association_leader_guid ,
+        school_id ,
+        school_name
+        )values (
+        <if test="condition.guid == null">
+         replace(uuid(),'-',''),
+        </if>
+        <if test="condition.guid != null">
+            #{condition.guid},
+        </if>
+        #{condition.name},
+        #{condition.subContent} ,
+        #{condition.avatarUrl} ,
+        now(),
+        now(),
+        #{condition.createUserGuid} ,
+        #{condition.associationLeaderGuid} ,
+        #{condition.schoolId} ,
+        #{condition.schoolName}
+        )
+    </insert>
+    <update id="updateAssociation"></update>
+    <delete id="deleteAssociation"></delete>
+    <select id="countAssociation" resultType="java.lang.Long">
+        select count(1) from association
+        <where>
+            <if test="condition.associationLeaderGuid != null">
+                association_leader_guid = #{condition.associationLeaderGuid}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.associationGuids != null and !condition.associationGuids.empty">
+                guid in
+                <foreach collection="condition.associationGuids" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
+    <select id="queryAssociation" resultType="com.association.workflow.model.AssociationDO">
+        select * from association
+        <where>
+            <if test="condition.associationLeaderGuid != null">
+                association_leader_guid = #{condition.associationLeaderGuid}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.associationGuids != null and !condition.associationGuids.empty">
+                guid in
+                <foreach collection="condition.associationGuids" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        Order by update_time desc
+        LIMIT #{condition.offset} , #{condition.limit}
+    </select>
 </mapper>

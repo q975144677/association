@@ -8,3 +8,7 @@ nacos:
         dataId: category
       - group: association
         dataId: auth
+
+spring:
+  main:
+    allow-bean-definition-overriding: true

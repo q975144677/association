@@ -90,7 +90,11 @@
                 <artifactId>bcrypt</artifactId>
                 <version>${bcrypt-version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>com.association.server</groupId>
+                <artifactId>workflow-iface</artifactId>
+                <version>${workflow-version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

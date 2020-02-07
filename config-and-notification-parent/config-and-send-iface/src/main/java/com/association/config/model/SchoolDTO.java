@@ -13,7 +13,7 @@ public class SchoolDTO {
     @Getter
     private static SchoolDTO instance ;
     @Data
-    private static class Area{
+    public  static class Area{
         private int code ;
         private String name ;
         private List<School> schools;

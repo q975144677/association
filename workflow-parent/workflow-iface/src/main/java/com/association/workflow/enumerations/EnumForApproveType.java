@@ -13,7 +13,8 @@ public enum EnumForApproveType {
     JOIN_ASSOCIATION(1, "加入社团请求"),
     HOLD_ACTIVITY(2,"发起活动请求"),
     COMPLAIN(3,"申诉请求"),
-    CERTIFIED(4,"资格证请求"), // 学校学生认证 需上传 学生证照片&身份证照片
+    CERTIFIED(4,"资格证请求"), // 教师认证
+    CREATE_ASSOCIATION(5,"创建社团"),
     UNKNOWN(-99,"未知")
     ;
     private int code;

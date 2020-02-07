@@ -2,7 +2,7 @@ package com.association.workflow.service.external;
 
 import com.association.notifacition.model.Message;
 import com.association.workflow.iface.IMIface;
-import com.associtaion.user.model.UserDO;
+import com.association.user.model.UserDO;
 import component.Proto;
 
 import java.util.List;

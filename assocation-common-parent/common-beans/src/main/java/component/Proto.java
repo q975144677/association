@@ -9,12 +9,11 @@ import org.springframework.http.HttpStatus;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Proto<T> {
-    private Integer code ;
+    private Integer code = 200;
     private String info ;
     private T data;
-
     public static <T> Proto<T> ok(Proto<T> data){
-        if(data == null){
+        if(data == null || data.getData() == null){
             return fail();
         }
         T obj = data.getData();
@@ -29,14 +28,18 @@ public class Proto<T> {
         return proto;
     }
     public static <T> Proto<T> fail(){
-        return new Proto<>(HttpStatus.OK.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),null);
+        return new Proto<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),null);
     }
     public static <T> Proto<T> fail(T t){
-        return new Proto<>(HttpStatus.OK.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),t);
+        return new Proto<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase(),t);
     }
 
     public static Proto fail(String msg){
-        return new Proto<>(HttpStatus.OK.value(),msg,null);
+        return new Proto<>(HttpStatus.INTERNAL_SERVER_ERROR.value(),msg,null);
     }
+
+ public boolean check(){
+        return data != null && code.equals(HttpStatus.OK.value());
+ }
 }
 

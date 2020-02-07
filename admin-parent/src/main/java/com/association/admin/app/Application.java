@@ -9,9 +9,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.association.*","com.association.admin.app"})
 @EnableDiscoveryClient
-@ComponentScan(basePackages = {"com.association.admin"})
+@ComponentScan(basePackages = {"com.association.*"})
 public class Application {
     public static ConfigurableApplicationContext ctx;
     private static ILogger logger = new ILogger();

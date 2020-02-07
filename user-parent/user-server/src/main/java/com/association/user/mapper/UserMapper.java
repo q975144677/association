@@ -1,7 +1,7 @@
 package com.association.user.mapper;
 
-import com.associtaion.user.condition.ConditionForUser;
-import com.associtaion.user.model.UserDO;
+import com.association.user.condition.ConditionForUser;
+import com.association.user.model.UserDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -18,4 +18,5 @@ public interface UserMapper {
 
     UserDO getUser(@Param("condition")ConditionForUser condition);
 
+    List<UserDO> getUsers(@Param("condition")ConditionForUser condition);
 }

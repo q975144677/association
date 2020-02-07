@@ -1,7 +1,7 @@
 package com.association.workflow.iface;
 
 import com.association.notifacition.model.Message;
-import com.associtaion.user.model.UserDO;
+import com.association.user.model.UserDO;
 import component.Proto;
 
 import java.util.List;

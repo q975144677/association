@@ -15,5 +15,6 @@ public class AssociationDO {
     private String createUserGuid;
     private String createUserName;
     private String associationLeaderGuid ;
-    private String schoolGuid ;
+    private Integer schoolId ;
+    private String schoolName ;
 }

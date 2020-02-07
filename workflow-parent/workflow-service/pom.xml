@@ -19,6 +19,10 @@
         <artifactId>workflow-iface</artifactId>
     </dependency>
     <dependency>
+        <groupId>com.association.server</groupId>
+        <artifactId>user-iface</artifactId>
+    </dependency>
+    <dependency>
         <groupId>com.association.common</groupId>
         <artifactId>common-all</artifactId>
     </dependency>
@@ -39,6 +43,16 @@
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter</artifactId>
+        <exclusions>
+            <exclusion>
+                <artifactId>log4j-to-slf4j</artifactId>
+                <groupId>org.apache.logging.log4j</groupId>
+            </exclusion>
+            <exclusion>
+                <artifactId>logback-classic</artifactId>
+                <groupId>ch.qos.logback</groupId>
+            </exclusion>
+        </exclusions>
     </dependency>
     <dependency>
         <groupId>org.springframework.boot</groupId>

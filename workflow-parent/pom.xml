@@ -40,6 +40,11 @@
                 <version>${workflow-version}</version>
             </dependency>
             <dependency>
+                <groupId>com.association.server</groupId>
+                <artifactId>user-iface</artifactId>
+                <version>${user-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.association.common</groupId>
                 <artifactId>common-all</artifactId>
                 <version>${common-version}</version>

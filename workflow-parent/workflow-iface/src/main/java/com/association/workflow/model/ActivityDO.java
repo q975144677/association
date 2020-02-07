@@ -24,6 +24,7 @@ public class ActivityDO {
     private String delayReason ;
     private String cancelReason ;
     private String approveMoney ;
+    //pay 相关估计不能用了
     private String payAccount ;
     private Integer payType ;
     private Integer approveStatus ;

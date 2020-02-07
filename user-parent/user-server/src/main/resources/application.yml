@@ -12,10 +12,14 @@ mybatis:
   type-aliases-package: com.association.user.model
   configuration:
     map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  config-location: classpath:mybatis-config.xml
 
 user:
   token:
     life: 14
     unit: DAYS
 role:
-  common: 1234 # todo 修改为普通用户guid
+  common: 1234  #直接写死
+  teacher: 3234
+  admin: 4234

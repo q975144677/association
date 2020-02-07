@@ -2,7 +2,7 @@ package com.association.workflow.iface;
 
 import com.association.workflow.condition.ConditionForActivity;
 import com.association.workflow.model.ActivityDO;
-import com.associtaion.user.model.UserDO;
+import com.association.user.model.UserDO;
 import component.PaginProto;
 import component.Proto;
 import org.springframework.cloud.openfeign.FeignClient;

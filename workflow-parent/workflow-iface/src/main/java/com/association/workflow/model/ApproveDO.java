@@ -10,6 +10,8 @@ import java.util.Date;
 public class ApproveDO {
 
     private String guid;
+    // 若为 加入社团请求 则为社团id
+    // 若为 加入活动请求 则为活动id
     private String approveGuid ;
     private Integer approveStatus;
     private Integer approveType;
@@ -19,8 +21,23 @@ public class ApproveDO {
     private String updateUserGuid;
     private String createUserName;
     private String updateUserName;
-    private String reason;
-
+    private String reason ;
+    private String detail ;
+    private Integer schoolId ;
+    private String schoolName ;
+    @Data
+    public static class DetailForJoinAssociation{
+        private String associationGuid ;
+        private String associationName ;
+    }
+    @Data
+    public static class DetailForCreateAssociation{
+        private String associationName ;
+    }
+    @Data
+    public static  class DetailForCreateActivity{
+        private ActivityDO activityDO ;
+    }
     public String getApproveStatusName() {
         return approveStatus == null ? null : EnumForApproveStatus.parse(approveStatus).getInfo();
     }

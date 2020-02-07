@@ -3,4 +3,118 @@
 <mapper namespace="com.association.workflow.mapper.ApproveMapper">
 
 
+    <insert id="createNewApprove">
+        insert into
+        approve(
+        guid,
+        approve_guid,
+        approve_status ,
+        approve_type ,
+        create_time ,
+        update_time ,
+        create_user_guid ,
+        update_user_guid ,
+        create_user_name ,
+        update_user_name ,
+        reason ,
+        detail ,
+        school_id ,
+        school_name
+        )
+        values (
+        replace(uuid(),'-',''),
+        #{condition.approveGuid},
+        #{condition.approveStatus} ,
+        #{condition.approveType} ,
+        now(),
+        now(),
+        #{condition.createUserGuid},
+        #{condition.createUserGuid},
+        #{condition.createUserName} ,
+        #{condition.createUserName} ,
+        #{condition.reason} ,
+        #{condition.detail},
+        #{condition.schoolId},
+        #{condition.schoolName}
+        )
+    </insert>
+    <update id="updateApprove">
+        update
+        approve
+        <set>
+            <if test="condition.approveStatus != null">
+                approve_status = #{condition.approveStatus},
+            </if>
+            update_time = #{condition.updateTime} ,
+            update_user_guid = #{condition.updateUserGuid},
+            update_user_name = #{condition.updateUserName}
+        </set>
+        where guid = #{condition.guid}
+    </update>
+    <delete id="deleteApprove"></delete>
+    <select id="queryApproveList" resultType="com.association.workflow.model.ApproveDO">
+        select * from
+        approve
+        <where>
+            <if test="condition.approveType != null">
+                approve_type = #{condition.approveType}
+            </if>
+            <if test="condition.approveGuid  != null ">
+                and approve_guid = #{condition.approveGuid}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.createUserGuid != null">
+                and create_user_guid = #{condition.createUserGuid}
+            </if>
+            <if test="condition.approveStatus != null">
+                and approve_status = #{condition.approveStatus}
+            </if>
+            <if test="condition.approveGuids != null and !condition.approveGuids.empty">
+                and approve_guid in
+                <foreach collection="condition.approveGuids" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+            <if test="condition.approveStatusList != null and !condition.approveStatusList.empty">
+                and approve_status in
+                <foreach collection="condition.approveStatusList" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+        order by approve_status asc, update_time desc
+        LIMIT #{condition.offset} , #{condition.limit}
+    </select>
+    <select id="getApprove" resultType="com.association.workflow.model.ApproveDO">
+        select * from approve
+        <where>
+            guid = #{guid}
+        </where>
+    </select>
+    <select id="countApprove" resultType="java.lang.Long">
+        select count(*) from
+        approve
+        <where>
+            <if test="condition.approveType != null">
+                approve_type = #{condition.approveType}
+            </if>
+            <if test="condition.approveGuid  != null ">
+                and approve_guid = #{condition.approveGuid}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.createUserGuid != null">
+                and create_user_guid = #{condition.createUserGuid}
+            </if>
+            <if test="condition.approveGuids != null and !condition.approveGuids.empty">
+                and approve_guid in
+                <foreach collection="condition.approveGuids" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
+    </select>
 </mapper>

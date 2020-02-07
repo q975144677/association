@@ -3,6 +3,7 @@ package com.association.user.component;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
 import org.springframework.data.redis.core.script.RedisScript;
 
 import java.util.UUID;
@@ -24,11 +25,16 @@ public class RedisLock {
     }
 
     public Boolean lock(){
-        Object res = redisTemplate.execute(RedisScript.of(luaScript()), null);
+//        Object res = redisTemplate.execute(RedisScript.of(luaScript()), null);
+        DefaultRedisScript<Long> defaultRedisScript = new DefaultRedisScript<>();
+        defaultRedisScript.setResultType(Long.class);
+        defaultRedisScript.setScriptText(luaScript());
+        Object res= redisTemplate.execute(defaultRedisScript,null);
         return res == null ? Boolean.FALSE : ((Long)res == 1) ;
     }
 
     public void unLock(){
+        System.out.println(key);
         Object res = redisTemplate.opsForValue().get(key) ;
         if(res == null){return ; }
         if(String.valueOf(res).equals(randomValue)) {

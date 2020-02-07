@@ -3,7 +3,7 @@ package com.association.workflow.service.external;
 import com.association.workflow.condition.ConditionForActivity;
 import com.association.workflow.iface.ActivityIface;
 import com.association.workflow.model.ActivityDO;
-import com.associtaion.user.model.UserDO;
+import com.association.user.model.UserDO;
 import component.PaginProto;
 import component.Proto;
 import org.springframework.web.bind.annotation.RestController;

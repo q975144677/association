@@ -3,4 +3,43 @@
 <mapper namespace="com.association.user.mapper.RoleMapper">
 
 
+    <insert id="createNewRole">
+        INSERT INTO
+        role(guid , name , auth)
+        VALUES
+         (
+            replace(uuid(),'-',''),
+            #{condition.name},
+            #{condition.authJson}
+        )
+    </insert>
+    <update id="updateRole">
+        UPDATE role
+        <set>
+            <if test="condition.name != null">
+                name = #{condition.name},
+            </if>
+            <if test="condition.authJson != null">
+                auth = #{condition.authJson},
+            </if>
+        </set>
+        <where>
+            guid = #{condition.guid}
+        </where>
+    </update>
+    <delete id="deleteRole">
+        DELETE FROM role
+        <where>
+            guid =#{guid}
+        </where>
+    </delete>
+    <select id="getRoleList" resultType="com.association.user.model.RoleDO">
+        SELECT * FROM role
+        <where>
+            <if test="condition.name != null ">
+                name = #{condition.name}
+            </if>
+        </where>
+        LIMIT #{limit} OFFSET
+    </select>
 </mapper>

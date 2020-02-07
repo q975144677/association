@@ -1,6 +1,6 @@
 package com.association.config.model;
 
-import com.associtaion.user.model.Auth;
+import com.association.user.model.Auth;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;

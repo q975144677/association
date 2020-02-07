@@ -3,4 +3,8 @@
 <mapper namespace="com.association.workflow.mapper.ActivityMapper">
 
 
+    <insert id="createNewActivity"></insert>
+    <update id="updateActivity"></update>
+    <delete id="deleteActivity"></delete>
+    <select id="queryActivity" resultType="com.association.workflow.model.ActivityDO"></select>
 </mapper>

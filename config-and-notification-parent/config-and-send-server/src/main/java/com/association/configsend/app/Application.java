@@ -15,7 +15,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients("com.association")
 @ComponentScan(basePackages = {"com.association.configsend" , "com.association.*"})
 public class Application {
     public static ILogger logger = ILogger.getInstance();

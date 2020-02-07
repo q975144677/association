@@ -8,7 +8,7 @@ import org.springframework.http.HttpStatus;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PaginProto<T> extends Proto {
+public class PaginProto<T> extends Proto<T> {
     private Page page;
 
     public static <T> PaginProto<T> ok(Proto<T> data, Page page) {
@@ -32,7 +32,7 @@ public class PaginProto<T> extends Proto {
     }
 
 
-    public PaginProto(Integer code, String info, Object data, Page page) {
+    public PaginProto(Integer code, String info, T data, Page page) {
         super(code, info, data);
         this.page = page;
     }
@@ -40,7 +40,7 @@ public class PaginProto<T> extends Proto {
     @Data
     @AllArgsConstructor
     @NoArgsConstructor
-    static class Page {
+    public static class Page {
         Integer pageIndex = 1;
         Integer pageSize = 10;
         Integer pageCount = 1;
