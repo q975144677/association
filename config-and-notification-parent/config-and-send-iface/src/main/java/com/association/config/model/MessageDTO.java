@@ -12,4 +12,7 @@ public class MessageDTO {
     private String content ;
     private String guid;
     private List<String> toGuids;
+    private String fromName ;
+    private String avatar ;
+    Long timestamp = System.currentTimeMillis();
 }

@@ -24,7 +24,7 @@ public class LogAspect {
     LoggerConfiguration loggerConfiguration;
 
     //切面定义
-    @Pointcut("(within(com.association..*)) && !(within(com.association.common.all.util.log.*)) ")
+    @Pointcut("(within(com.association..*)) && !(within(com.association.common.all.util.log.*))")
     public void advice() {
     }
 

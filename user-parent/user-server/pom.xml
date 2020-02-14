@@ -17,6 +17,10 @@
             <artifactId>workflow-iface</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.association.common</groupId>
             <artifactId>common-all</artifactId>
         </dependency>

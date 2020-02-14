@@ -66,6 +66,10 @@ public class RedisUtil {
         }
     }
 
+    public  void sadd(String key, String... value) {
+        redisTemplate.boundSetOps(key).add(value);
+    }
+
     /**
      * 删除缓存
      *

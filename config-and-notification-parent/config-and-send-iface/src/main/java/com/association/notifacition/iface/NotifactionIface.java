@@ -16,6 +16,9 @@ public interface NotifactionIface {
     @RequestMapping("sdm")
     Proto<Boolean> sendMessage(@RequestBody MessageDTO message);
 
+    @RequestMapping("pkl")
+    Proto<Set<MessageDTO>> pullMessage(@RequestParam("guid") String guid);
+
     @RequestMapping("gmsg")
     Proto<Set<?>> getMessage(@RequestParam("guid") String guid);
 
