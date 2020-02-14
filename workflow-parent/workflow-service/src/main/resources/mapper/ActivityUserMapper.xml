@@ -3,7 +3,35 @@
 <mapper namespace="com.association.workflow.mapper.ActivityUserMapper">
 
 
-    <insert id="save"></insert>
-    <delete id="delete"></delete>
-    <select id="findActivityUser" resultType="com.association.workflow.model.ActivityUserDO"></select>
+    <insert id="save">
+        insert into activity_user
+        (guid,
+         user_guid,
+         activity_guid)
+        values (#{condition.guid},
+                #{condition.userGuid},
+                #{condition.activityGuid})
+    </insert>
+    <delete id="delete">
+        delete
+        from activity_user
+        where guid = #{guid}
+    </delete>
+    <delete id="deleteRef">
+        delete from
+            activity_user
+where activity_guid = #{activityGuid} and user_guid = #{userGuid}
+    </delete>
+    <select id="findActivityUser" resultType="com.association.workflow.model.ActivityUserDO">
+        select * from activity_user
+        <where>
+            <if test="condition.userGuid != null">
+                user_guid = #{condition.userGuid}
+            </if>
+            <if test="condition.activityGuid != null">
+                and activity_guid = #{condition.activityGuid}
+            </if>
+        </where>
+        ORDER BY create_time desc
+    </select>
 </mapper>

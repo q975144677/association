@@ -12,6 +12,7 @@ public class ActivityDO {
     private String name ;
     private Date createTime ;
     private Date updateTime ;
+    private Integer schoolId ;
     private String createUserGuid;
     private String updateUserGuid;
     private String createUserName ;
@@ -19,6 +20,7 @@ public class ActivityDO {
     private String reason ;
     private String detail ;
     private Integer activityStatus;
+    private String associationGuid ;
     private Date fromDate ;
     private Date toDate ;
     private String delayReason ;

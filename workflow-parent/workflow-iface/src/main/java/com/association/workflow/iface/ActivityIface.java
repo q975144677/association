@@ -1,8 +1,10 @@
 package com.association.workflow.iface;
 
 import com.association.workflow.condition.ConditionForActivity;
+import com.association.workflow.condition.ConditionForActivityUser;
 import com.association.workflow.model.ActivityDO;
 import com.association.user.model.UserDO;
+import com.association.workflow.model.ActivityUserDO;
 import component.PaginProto;
 import component.Proto;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -33,7 +35,11 @@ public interface ActivityIface {
      * 查找参与活动的用户
      */
     @RequestMapping("queryActUser")
-    PaginProto<List<UserDO>> queryActivityUsers(ConditionForActivity condition);
+    Proto<List<UserDO>> queryActivityUsers(ConditionForActivity condition);
 
+    @RequestMapping("quitAct")
+    Proto<Boolean> quitActivity(ConditionForActivityUser condition);
 
+    @RequestMapping("joinActivity")
+    Proto<Boolean> joinActivity(ActivityUserDO activityUserDO);
 }

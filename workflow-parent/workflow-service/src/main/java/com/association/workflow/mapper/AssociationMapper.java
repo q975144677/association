@@ -17,4 +17,6 @@ public interface AssociationMapper {
     List<AssociationDO> queryAssociation(@Param("condition")ConditionForAssociation condition);
 
     Long countAssociation(@Param("condition")ConditionForAssociation condition);
+
+    AssociationDO getAssociationSimple(@Param("condition")ConditionForAssociation condition);
 }

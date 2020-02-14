@@ -63,7 +63,7 @@
                 and school_id = #{condition.schoolId}
             </if>
             <if test="condition.associationGuids != null and !condition.associationGuids.empty">
-                guid in
+                and guid in
                 <foreach collection="condition.associationGuids" item="item" open="(" close=")" separator=",">
                     #{item}
                 </foreach>
@@ -71,5 +71,25 @@
         </where>
         Order by update_time desc
         LIMIT #{condition.offset} , #{condition.limit}
+    </select>
+    <select id="getAssociationSimple" resultType="com.association.workflow.model.AssociationDO">
+        select * from association
+        <where>
+            <if test="condition.associationLeaderGuid != null">
+                association_leader_guid = #{condition.associationLeaderGuid}
+            </if>
+            <if test="condition.schoolId != null">
+                and school_id = #{condition.schoolId}
+            </if>
+            <if test="condition.guid != null">
+                and guid = #{condition.guid}
+            </if>
+            <if test="condition.associationGuids != null and !condition.associationGuids.empty">
+                and guid in
+                <foreach collection="condition.associationGuids" item="item" open="(" close=")" separator=",">
+                    #{item}
+                </foreach>
+            </if>
+        </where>
     </select>
 </mapper>

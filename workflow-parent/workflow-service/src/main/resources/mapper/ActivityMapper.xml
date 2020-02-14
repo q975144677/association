@@ -3,8 +3,80 @@
 <mapper namespace="com.association.workflow.mapper.ActivityMapper">
 
 
-    <insert id="createNewActivity"></insert>
-    <update id="updateActivity"></update>
-    <delete id="deleteActivity"></delete>
-    <select id="queryActivity" resultType="com.association.workflow.model.ActivityDO"></select>
+    <insert id="createNewActivity">
+        insert into activity
+        (guid,
+         name,
+         create_time,
+         update_time,
+         create_user_guid,
+         update_user_guid,
+         create_user_name,
+         update_user_name,
+         reason,
+         detail,
+         activity_status,
+         delay_reason,
+         cancel_reason,
+         association_guid,
+         school_id)
+        values (#{condition.guid},
+                #{condition.name},
+                now(),
+                now(),
+                #{condition.createUserGuid},
+                #{condition.createUserGuid},
+                #{condition.createUserName},
+                #{condition.createUserName},
+                #{condition.reason},
+                #{condition.detail},
+                #{condition.activityStatus},
+                #{condition.delayReason},
+                #{condition.cancelReason},
+                #{condition.associationGuid},
+                #{condition.schoolId})
+    </insert>
+    <update id="updateActivity">
+        update activity
+        <set>
+
+            <if test="condition.reason != null">
+                reason = #{condition.reason}
+            </if>
+            <if test="condition.name != null">
+                , name = #{condition.name}
+            </if>
+            <if test="condition.detail != null">
+                , detail = #{condition.detail}
+            </if>
+            <if test="condition.delayReason != null">
+                , delay_reason = #{condition.delayReason}
+            </if>
+            <if test="condition.cancelReason != null">
+                , cancel_reason = #{condition.cancelReason}
+            </if>
+            <if test="condition.activityStatus != null">
+                , activity_status = #{condition.activityStatus}
+            </if>
+            , update_time = now()
+            , update_user_guid = #{condition.updateUserGuid}
+            , update_user_name = #{condition.updateUserName}
+        </set>
+    </update>
+    <delete id="deleteActivity">
+        delete
+        from activity
+        where guid = #{guid}
+    </delete>
+    <select id="queryActivity" resultType="com.association.workflow.model.ActivityDO">
+        select * from
+        activity
+        <where>
+        <if test="condition.associationGuid != null">
+            association_guid = #{condition.associationGuid}
+        </if>
+        </where>
+        order by update_time desc
+        LIMIT #{condition.offset} , #{condition.limit}
+</select>
 </mapper>

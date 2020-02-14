@@ -10,4 +10,5 @@ public interface ActivityUserMapper {
     Boolean save(@Param("condition") ActivityUserDO activityUserDO);
     Boolean delete(@Param("guid") String guid);
     List<ActivityUserDO> findActivityUser(@Param("condition") ConditionForActivityUser condition);
+    Boolean deleteRef(@Param("activityGuid") String actGuid , @Param("userGuid") String userGuid) ;
 }

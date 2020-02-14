@@ -40,6 +40,9 @@ public class BasicComponent {
         return PaginProto.fail();
     }
 
+    public static RuntimeException throwDefaultHttpRequestException(){
+        throw new HttpRequestException("PARAM ERROR" , HttpStatus.OK.value());
+    }
 
     public Operator getOperator(HttpServletRequest request){
         return (Operator)request.getAttribute("operator");

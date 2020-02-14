@@ -2,24 +2,20 @@ package com.association.admin.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.association.admin.component.RedisUtil;
-import com.association.workflow.condition.ConditionForActivity;
-import com.association.workflow.condition.ConditionForApprove;
-import com.association.workflow.condition.ConditionForAssociation;
-import com.association.workflow.condition.ConditionForAssociationUser;
+import com.association.user.model.UserDO;
+import com.association.workflow.condition.*;
 import com.association.workflow.enumerations.EnumForApproveStatus;
 import com.association.workflow.enumerations.EnumForApproveType;
 import com.association.workflow.iface.ActivityIface;
 import com.association.workflow.iface.ApproveIface;
 import com.association.workflow.iface.AssociationIface;
-import com.association.workflow.model.ActivityDO;
-import com.association.workflow.model.ApproveDO;
-import com.association.workflow.model.AssociationDO;
+import com.association.workflow.model.*;
 import com.association.user.Iface.UserIface;
-import com.association.workflow.model.AssociationUserDO;
 import component.BasicComponent;
 import component.HttpRequestException;
 import component.PaginProto;
 import component.Proto;
+import jdk.nashorn.internal.runtime.PrototypeObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mapping.Association;
 import org.springframework.http.HttpStatus;
@@ -133,26 +129,26 @@ public class MainController extends BasicComponent {
         List<ApproveDO> approveDOS = new ArrayList<>();
         if ("1234".equals(operator.getRoleGuid())) { // 应当由 user 服务提供
             // 判断是否建社申请 or 入社申请
-                //判断是否社长
+            //判断是否社长
             ConditionForAssociation conditionForAssociation = new ConditionForAssociation();
             conditionForAssociation.setAssociationLeaderGuid(operator.getGuid());
             conditionForAssociation.setPageIndex(1);
             conditionForAssociation.setPageSize(100);
             PaginProto<List<AssociationDO>> paginForAssociation = associationIface.queryAssociation(conditionForAssociation);
-            if(paginForAssociation != null && paginForAssociation.getData()!= null){
+            if (paginForAssociation != null && paginForAssociation.getData() != null) {
                 List<AssociationDO> res = paginForAssociation.getData();
-                if(CollectionUtils.isEmpty(res)){
+                if (CollectionUtils.isEmpty(res)) {
                     // 非社长
                     condition.setCreateUserGuid(operator.getGuid());
-                    PaginProto<List<ApproveDO>> paginProto =  approveIface.queryApprove(condition);
+                    PaginProto<List<ApproveDO>> paginProto = approveIface.queryApprove(condition);
                     return paginProto;
-                }else{
-                    if(Integer.valueOf(EnumForApproveType.CREATE_ASSOCIATION.getCode()).equals(condition.getApproveType())){
+                } else {
+                    if (Integer.valueOf(EnumForApproveType.CREATE_ASSOCIATION.getCode()).equals(condition.getApproveType())) {
                         // 建社
                         condition.setCreateUserGuid(operator.getGuid());
-                        PaginProto<List<ApproveDO>> paginProto =  approveIface.queryApprove(condition);
+                        PaginProto<List<ApproveDO>> paginProto = approveIface.queryApprove(condition);
                         return paginProto;
-                    }else if (Integer.valueOf(EnumForApproveType.JOIN_ASSOCIATION.getCode()).equals(condition.getApproveType())){
+                    } else if (Integer.valueOf(EnumForApproveType.JOIN_ASSOCIATION.getCode()).equals(condition.getApproveType())) {
                         condition.setApproveGuids(res.stream().map(associationDO -> associationDO.getGuid()).collect(Collectors.toList()));
                         return approveIface.queryApprove(condition);
                     }
@@ -160,8 +156,8 @@ public class MainController extends BasicComponent {
             }
 
         }
-        if("2234".equals(operator.getRoleGuid())){ // 应当由 user 服务提供
-            if(Integer.valueOf(EnumForApproveType.CREATE_ASSOCIATION.getCode()).equals(condition.getApproveType())){
+        if ("2234".equals(operator.getRoleGuid())) { // 应当由 user 服务提供
+            if (Integer.valueOf(EnumForApproveType.CREATE_ASSOCIATION.getCode()).equals(condition.getApproveType())) {
                 condition.setSchoolId(condition.getSchoolId());
                 return approveIface.queryApprove(condition);
             }
@@ -175,36 +171,37 @@ public class MainController extends BasicComponent {
     }
 
     @PostMapping("checkLeader")
-public Proto<Boolean> checkLeader(HttpServletRequest request){
+    public Proto<Boolean> checkLeader(HttpServletRequest request) {
         Operator operator = getOperator(request);
         ConditionForAssociation condition = new ConditionForAssociation();
         condition.setAssociationLeaderGuid(operator.getGuid());
         condition.setPageIndex(1);
         condition.setPageSize(1);
         Proto<List<AssociationDO>> proto = associationIface.queryAssociation(condition);
-        if(proto == null || CollectionUtils.isEmpty(proto.getData())){
+        if (proto == null || CollectionUtils.isEmpty(proto.getData())) {
             return getResult(Boolean.FALSE);
         }
         return getResult(Boolean.TRUE);
-}
+    }
 
-@PostMapping("updateApprove")
-public Proto<Boolean> updateApprove(@RequestBody ApproveDO approveDO){
+    @PostMapping("updateApprove")
+    public Proto<Boolean> updateApprove(@RequestBody ApproveDO approveDO) {
 //EnumForApproveStatus
-    return getResult(approveIface.updateApprove(approveDO));
+        return getResult(approveIface.updateApprove(approveDO));
     }
 
 
     @PostMapping("queryAssociation")
-    public PaginProto<List<AssociationDO>> queryAssociation(@RequestBody ConditionForAssociation condition , HttpServletRequest request){
+    public PaginProto<List<AssociationDO>> queryAssociation(@RequestBody ConditionForAssociation condition, HttpServletRequest request) {
         Operator operator = getOperator(request);
         condition.setSchoolId(operator.getSchoolId());
         return associationIface.queryAssociation(condition);
     }
+
     @PostMapping("queryMyJoinApprove")
     // 1. approving
     // 2. pass
-    public Proto<JSONObject> queryMyJoinApprove(HttpServletRequest request){
+    public Proto<JSONObject> queryMyJoinApprove(HttpServletRequest request) {
         JSONObject result = new JSONObject();
         Operator operator = getOperator(request);
         ConditionForApprove condition = new ConditionForApprove();
@@ -214,27 +211,27 @@ public Proto<Boolean> updateApprove(@RequestBody ApproveDO approveDO){
         condition.setPageIndex(1);
         condition.setPageSize(1000);
         PaginProto<List<ApproveDO>> paginProto = approveIface.queryApprove(condition);
-        if(paginProto != null && paginProto.getData() != null){
+        if (paginProto != null && paginProto.getData() != null) {
             List<ApproveDO> approves = paginProto.getData();
-            List<String> approving =approves.stream().map(approveDO -> approveDO.getApproveGuid()).collect(Collectors.toList());
-            result.put("approving" , approving);
+            List<String> approving = approves.stream().map(approveDO -> approveDO.getApproveGuid()).collect(Collectors.toList());
+            result.put("approving", approving);
         }
 
         ConditionForAssociationUser conditionForAssociationUser = new ConditionForAssociationUser();
         conditionForAssociationUser.setUserGuid(operator.getGuid());
         Proto<List<AssociationUserDO>> proto = associationIface.queryAssociationUser(conditionForAssociationUser);
-        if(proto != null && proto.getData() != null){
+        if (proto != null && proto.getData() != null) {
             List<AssociationUserDO> associationUserDOS = proto.getData();
             List<String> passedAssociationGuids = associationUserDOS.stream().map(asud -> asud.getAssociationGuid()).collect(Collectors.toList());
-            result.put("pass",passedAssociationGuids);
+            result.put("pass", passedAssociationGuids);
         }
         return getResult(result);
     }
 
     @PostMapping("joinAssociation")
-    public Proto<Boolean> joinAssociation(@RequestBody Map<String,String> map , HttpServletRequest request){
+    public Proto<Boolean> joinAssociation(@RequestBody Map<String, String> map, HttpServletRequest request) {
         String associationGuid = map.get("associationGuid");
-        if(StringUtils.isEmpty(associationGuid)){
+        if (StringUtils.isEmpty(associationGuid)) {
             return getResult(false);
         }
         Operator operator = getOperator(request);
@@ -251,7 +248,7 @@ public Proto<Boolean> updateApprove(@RequestBody ApproveDO approveDO){
         conditionForAssociation.setPageIndex(1);
         conditionForAssociation.setPageSize(1);
         Proto<List<AssociationDO>> proto = associationIface.queryAssociation(conditionForAssociation);
-        if(proto == null && CollectionUtils.isEmpty(proto.getData())){
+        if (proto == null && CollectionUtils.isEmpty(proto.getData())) {
             return getResult(false);
         }
         detail.setAssociationName(proto.getData().get(0).getName());
@@ -259,20 +256,91 @@ public Proto<Boolean> updateApprove(@RequestBody ApproveDO approveDO){
     }
 
     @PostMapping("getJoinAssociation")
-    public Proto<List<AssociationDO>> getJoinAssociation(HttpServletRequest request){
-        Operator operator =getOperator(request);
+    public Proto<List<AssociationDO>> getJoinAssociation(HttpServletRequest request) {
+        Operator operator = getOperator(request);
         ConditionForAssociationUser condition = new ConditionForAssociationUser();
         condition.setUserGuid(operator.getGuid());
-       Proto<List<AssociationUserDO>> protoForAU =  associationIface.queryAssociationUser(condition);
-       if(protoForAU != null && !CollectionUtils.isEmpty(protoForAU.getData())){
-           List<String> asIds = protoForAU.getData().stream().map(associationUserDO -> associationUserDO.getAssociationGuid()).collect(Collectors.toList());
-           ConditionForAssociation conditionForAssociation = new ConditionForAssociation();
-           conditionForAssociation.setAssociationGuids(asIds);
-           Proto<List<AssociationDO>> proto = associationIface.queryAssociation(conditionForAssociation);
-           return proto;
-       }
-       return getResult(Collections.EMPTY_LIST);
+        Proto<List<AssociationUserDO>> protoForAU = associationIface.queryAssociationUser(condition);
+        if (protoForAU != null && !CollectionUtils.isEmpty(protoForAU.getData())) {
+            List<String> asIds = protoForAU.getData().stream().map(associationUserDO -> associationUserDO.getAssociationGuid()).collect(Collectors.toList());
+            ConditionForAssociation conditionForAssociation = new ConditionForAssociation();
+            conditionForAssociation.setAssociationGuids(asIds);
+            Proto<List<AssociationDO>> proto = associationIface.queryAssociation(conditionForAssociation);
+            return proto;
+        }
+        return getResult(Collections.EMPTY_LIST);
     }
+
+
+    @PostMapping("changeAssociationDetail")
+    public Proto<Boolean> changeAssociationDetail(@RequestBody AssociationDO associationDO, HttpServletRequest request) {
+        if (StringUtils.isEmpty(associationDO.getGuid())) {
+            throw new HttpRequestException("PARAM ERROR ", HttpStatus.OK.value());
+        }
+        Operator operator = getOperator(request);
+        ConditionForAssociation condition = new ConditionForAssociation();
+        condition.setGuid(associationDO.getGuid());
+        Proto<AssociationDO> protoAssociation = associationIface.getAssociationSipmle(condition);
+        AssociationDO association = protoAssociation.getData();
+        if (StringUtils.isEmpty(association.getAssociationLeaderGuid()) || !association.getAssociationLeaderGuid().equals(operator.getGuid())) {
+            return getResult(Boolean.FALSE);
+        }
+        return getResult(associationIface.updateAssociation(associationDO));
+    }
+
+    @PostMapping("associationMates")
+    public Proto<List<UserDO>> associationMates(@RequestBody ConditionForAssociationUser condition) {
+        if (StringUtils.isEmpty(condition.getAssociationGuid())) {
+            throwDefaultHttpRequestException();
+        }
+        ConditionForAssociation conditionForAssociation = new ConditionForAssociation();
+        conditionForAssociation.setGuid(condition.getGuid());
+        return associationIface.getAssociationMates(conditionForAssociation);
+    }
+
+    @PostMapping("createActivity")
+    public Proto<Boolean> createActivity(@RequestBody ActivityDO activityDO, HttpServletRequest request) {
+        Operator operator = getOperator(request);
+        activityDO.setCreateUserGuid(operator.getGuid());
+        activityDO.setCreateUserName(operator.getName());
+        return getResult( activityIface.createNewActivity(activityDO));
+    }
+
+    @PostMapping("queryAssociationUser")
+    public Proto<?> queryAssociationUser(@RequestBody ConditionForAssociationUser condition) {
+        return getResult(associationIface.queryAssociationUser(condition));
+    }
+
+    @PostMapping("queryActivityUser")
+    public Proto<?> queryActivityUser(@RequestBody ConditionForActivity condition) {
+        return getResult(activityIface.queryActivityUsers(condition));
+    }
+
+    @PostMapping("quitAssociation")
+    public Proto<Boolean> quitAssociation(@RequestBody AssociationUserDO associationUserDO) {
+        return getResult(associationIface.quitAssociation(associationUserDO));
+    }
+
+    @PostMapping("quitActivity")
+    public Proto<Boolean> quitActivity(@RequestBody ConditionForActivityUser activityUserDO) {
+        return getResult(activityIface.quitActivity(activityUserDO));
+    }
+
+    @PostMapping("queryActivities")
+    public Proto<?> queryActivities(@RequestBody ConditionForActivity conditionForActivity) {
+        return getResult(activityIface.queryActivity(conditionForActivity));
+    }
+
+    @PostMapping("createActivity")
+    public Proto<Boolean> createActivity(@RequestBody ActivityDO activityDO) {
+        return getResult(activityIface.createNewActivity(activityDO));
+    }
+
+    @PostMapping("joinActivity")
+    public Proto<Boolean> joinActivity(@RequestBody ActivityUserDO activityUserDO) {
+        return getResult(activityIface.joinActivity(activityUserDO));
+    }
+
     public static enum RedisKey {
         DEFAULT_CODE,
         PASSWORD_CODE

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
+
 @FeignClient("association-workflow")
 public interface AssociationIface {
 
@@ -25,7 +26,7 @@ public interface AssociationIface {
      * 更新社团信息
      */
     @RequestMapping("updateAssociation")
-    Proto<Boolean> updateAssociation(@RequestBody AssociationDO associationDO );
+    Proto<Boolean> updateAssociation(@RequestBody AssociationDO associationDO);
 
     /**
      * 查看社团成员
@@ -43,5 +44,14 @@ public interface AssociationIface {
      * 查看社团关系
      */
     @RequestMapping("queryAssociationUser")
-    Proto<List<AssociationUserDO>> queryAssociationUser(@RequestBody ConditionForAssociationUser condition) ;
+    Proto<List<AssociationUserDO>> queryAssociationUser(@RequestBody ConditionForAssociationUser condition);
+
+    @RequestMapping("getAssociationSipmle")
+    Proto<AssociationDO> getAssociationSipmle(@RequestBody ConditionForAssociation condition);
+
+    @RequestMapping("isLeader")
+    Proto<Boolean> isLeader(@RequestBody ConditionForAssociation condition);
+
+    @RequestMapping("quitAssociation")
+    Proto<Boolean> quitAssociation(@RequestBody AssociationUserDO associationUserDO);
 }

@@ -4,36 +4,39 @@
 
 
     <insert id="save">
-        INSERT INTO
-        user_association
-        (
-        guid ,
-        user_guid ,
-        association_guid ,
-        create_date ,
-        update_date
-        )
-        values (
-          replace(uuid(),'-',''),
-          #{condition.userGuid} ,
-          #{condition.associationGuid} ,
-          now(),
-          now()
-        )
+        INSERT INTO user_association
+        (guid,
+         user_guid,
+         association_guid,
+         create_date,
+         update_date)
+        values (replace(uuid(), '-', ''),
+                #{condition.userGuid},
+                #{condition.associationGuid},
+                now(),
+                now())
 
     </insert>
     <delete id="delete">
-        delete from user_association where guid = #{guid}
+        delete
+        from user_association
+        where guid = #{guid}
+    </delete>
+    <delete id="deleteRef">
+        delete
+        from user_association
+        where user_guid = #{userGuid}
+          and association_guid = #{associationGuid}
     </delete>
     <select id="findAssociationUser" resultType="com.association.workflow.model.AssociationUserDO">
         select * from user_association
         <where>
-        <if test="condition.associationGuid != null">
-            association_guid = #{condition.associationGuid}
-        </if>
-        <if test="condition.userGuid != null">
-            and user_guid = #{condition.userGuid}
-        </if>
+            <if test="condition.associationGuid != null">
+                association_guid = #{condition.associationGuid}
+            </if>
+            <if test="condition.userGuid != null">
+                and user_guid = #{condition.userGuid}
+            </if>
         </where>
         LIMIT 10000
     </select>

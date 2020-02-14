@@ -66,4 +66,20 @@ public class AssociationServiceImpl extends BasicComponent implements Associatio
     public Proto<List<AssociationUserDO>> queryAssociationUser(ConditionForAssociationUser condition) {
         return getResult(associationUserMapper.findAssociationUser(condition));
     }
+
+    @Override
+    public Proto<AssociationDO> getAssociationSipmle(ConditionForAssociation condition) {
+        return getResult(associationMapper.getAssociationSimple(condition));
+    }
+
+    @Override
+    public Proto<Boolean> isLeader(ConditionForAssociation condition) {
+//        AssociationDO associationDO = ;
+        return getResult(associationMapper.getAssociationSimple(condition) != null);
+    }
+
+    @Override
+    public Proto<Boolean> quitAssociation(AssociationUserDO associationUserDO) {
+        return getResult(associationUserMapper.deleteRef(associationUserDO.getAssociationGuid() ,  associationUserDO.getUserGuid()));
+    }
 }

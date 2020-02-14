@@ -13,6 +13,7 @@ public class ConditionForActivity extends ConditionForPagin {
     private Date createTime;
     private Date updateTime;
     private String createUserGuid;
+    private String schoolId  ;
     private String updateUserGuid;
     private String createUserName;
     private String updateUserName;
