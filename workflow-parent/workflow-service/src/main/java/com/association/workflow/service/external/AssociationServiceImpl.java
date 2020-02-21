@@ -14,6 +14,7 @@ import component.BasicComponent;
 import component.PaginProto;
 import component.Proto;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -54,12 +55,12 @@ public class AssociationServiceImpl extends BasicComponent implements Associatio
         condition.prepare(null);
         PaginProto.Page page = new PaginProto.Page();
         Long recordCount = associationMapper.countAssociation(condition);
-        Integer pageCount = (int)Math.max(1 , Math.ceil((double)recordCount / (double)condition.getPageSize()));
+        Integer pageCount = (int) Math.max(1, Math.ceil((double) recordCount / (double) condition.getPageSize()));
         page.setPageCount(pageCount);
         page.setPageIndex(condition.getPageIndex());
         page.setPageSize(condition.getPageSize());
         page.setRecordCount(Math.toIntExact(recordCount));
-        return getPaginResult(associationMapper.queryAssociation(condition),page);
+        return getPaginResult(associationMapper.queryAssociation(condition), page);
     }
 
     @Override
@@ -69,7 +70,15 @@ public class AssociationServiceImpl extends BasicComponent implements Associatio
 
     @Override
     public Proto<AssociationDO> getAssociationSipmle(ConditionForAssociation condition) {
-        return getResult(associationMapper.getAssociationSimple(condition));
+        AssociationDO associationDO = associationMapper.getAssociationSimple(condition);
+        String leaderGuid = associationDO.getAssociationLeaderGuid();
+        ConditionForUser conditionForUser = new ConditionForUser();
+        conditionForUser.setGuid(leaderGuid);
+        Proto<UserDO> userDOProto = userIface.getUser(conditionForUser);
+        if (userDOProto.getCode() == HttpStatus.OK.value() && userDOProto.getData() != null) {
+            associationDO.setLeaderName(userDOProto.getData().getName());
+        }
+        return getResult(associationDO);
     }
 
     @Override
@@ -80,6 +89,6 @@ public class AssociationServiceImpl extends BasicComponent implements Associatio
 
     @Override
     public Proto<Boolean> quitAssociation(AssociationUserDO associationUserDO) {
-        return getResult(associationUserMapper.deleteRef(associationUserDO.getAssociationGuid() ,  associationUserDO.getUserGuid()));
+        return getResult(associationUserMapper.deleteRef(associationUserDO.getAssociationGuid(), associationUserDO.getUserGuid()));
     }
 }

@@ -235,7 +235,13 @@ public class UserController extends BasicComponent {
         logger.info(value + " - " + code);
         return getResult(code.equals(value));
     }
-
+    @PostMapping("getUserByGuid")
+    public Proto<?> getUserNameByGuid(@RequestBody Map<String,String> map ){
+        String guid = map.get("guid");
+        ConditionForUser condition = new ConditionForUser();
+        condition.setGuid(guid);
+        return userIface.getUser(condition);
+    }
     private String getRandomCode(int count) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < count; i++) {

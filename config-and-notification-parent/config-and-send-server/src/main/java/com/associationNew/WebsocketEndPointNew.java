@@ -32,28 +32,31 @@ import java.util.concurrent.ThreadPoolExecutor;
 public class WebsocketEndPointNew {
     private ILogger logger;
 
-//com.association.configsend.component.SocketManager socketManager= new com.association.configsend.component.SocketManager();
-  static  SocketManager socketManager = new SocketManager();
+    //com.association.configsend.component.SocketManager socketManager= new com.association.configsend.component.SocketManager();
+    static SocketManager socketManager = new SocketManager();
     UserIface userIface;
-Session session;
-    void prepare(){
-        if(logger == null){
+    Session session;
+
+    void prepare() {
+        if (logger == null) {
             logger = Application.ctx.getBean(ILogger.class);
         }
-        if(socketManager == null){
+        if (socketManager == null) {
 //            socketManager = Application.ctx.getBean(SocketManager.class);
         }
-        if(userIface == null){
+        if (userIface == null) {
             userIface = Application.ctx.getBean(UserIface.class);
         }
     }
+
     @OnOpen
-    public void onopen(){
+    public void onopen() {
         System.out.println("OPEN");
     }
+
     // 接收到消息 调用
     @OnMessage
-    public void handleTextMessage(String message , Session session) throws Exception {
+    public void handleTextMessage(String message, Session session) throws Exception {
 
 //        session.getBasicRemote().sendText("t"); session.getBasicRemote().sendText("t");
         prepare();
@@ -63,28 +66,28 @@ Session session;
          *     token : ""
          * }
          */
-        logger.info("连接：+1{}",message);
+        logger.info("连接：+1{}", message);
         String userMessage = message;
-        try{
+        try {
             JSONObject jsonObject = JSONObject.parseObject(userMessage);
             String token = jsonObject.getString("token");
-            if(StringUtils.isEmpty(token)){
+            if (StringUtils.isEmpty(token)) {
                 logger.info("token + " + token);
                 return;
             }
             Proto<UserDO> userProto = userIface.getUserByToken(token);
-            if(userProto == null || userProto.getData() == null ){
+            if (userProto == null || userProto.getData() == null) {
                 logger.info("error:{EMPTY USER}");
-                return ;
+                return;
             }
             UserDO userDO = userProto.getData();
             logger.info("socketADD" + JSONObject.toJSONString(userDO));
-            socketManager.add(userDO.getGuid(),session);
-           // socketManager.add(userDO.getGuid(),session); // 很奇怪 这里导致 STREAM_WRITING 了 原先是放在别的spring bean里的，会出奇怪的问题
-        }catch (Exception e){
+            socketManager.add(userDO.getGuid(), session);
+            // socketManager.add(userDO.getGuid(),session); // 很奇怪 这里导致 STREAM_WRITING 了 原先是放在别的spring bean里的，会出奇怪的问题
+        } catch (Exception e) {
             e.printStackTrace();
-            logger.error("SOMETHING ERROR : {}" , e.getMessage());
-            return ;
+            logger.error("SOMETHING ERROR : {}", e.getMessage());
+            return;
         }
 //        session.getBasicRemote().sendText("t"); session.getBasicRemote().sendText("t");
 
@@ -92,15 +95,13 @@ Session session;
     }
 
 
-
-
     @OnError
     public void handleTransportError(Session session, Throwable error) throws Exception {
-        System.out.println("报错：" +session.getId()  + "throw" + error.getMessage());
+        System.out.println("报错：" + session.getId() + "throw" + error.getMessage());
         prepare();
-        Map<String,Session> map = socketManager.getManager();
-        for(Map.Entry<String,Session> entry : map.entrySet()){
-            if(entry.getValue().getId().equals(session.getId())){
+        Map<String, Session> map = socketManager.getManager();
+        for (Map.Entry<String, Session> entry : map.entrySet()) {
+            if (entry.getValue().getId().equals(session.getId())) {
                 map.remove(entry.getKey());
             }
         }
@@ -111,53 +112,53 @@ Session session;
     public void afterConnectionClosed(Session session) throws Exception {
         prepare();
         System.out.println("连接断开 + " + session.getId());
-        Map<String,Session> map = socketManager.getManager();
-        for(Map.Entry<String,Session> entry : map.entrySet()){
-            if(entry.getValue().getId().equals(session.getId())){
+        Map<String, Session> map = socketManager.getManager();
+        for (Map.Entry<String, Session> entry : map.entrySet()) {
+            if (entry.getValue().getId().equals(session.getId())) {
                 map.remove(entry.getKey());
             }
         }
 
     }
 
-    public synchronized void sendMessage(String message,String userGuid){
-            prepare();
-            Map.Entry<String, Session> entryset = socketManager.getManager().entrySet().stream().filter(entry -> userGuid.equals(entry.getKey())).findAny().orElse(null);
-            try {
-                if (entryset == null) {
-                    System.out.println(entryset + "NULL ENTRY");
-                    return;
-                }
-                System.out.println("entryset :" + entryset.getKey());
-                System.out.println("SEND MESSAGE + " + message);
-                    if (entryset.getValue().isOpen()) {
-                        System.out.println("OPENED SESSION");
-                        entryset.getValue().getBasicRemote().sendText(message);
-                    }
-            } catch (IOException e) {
-                e.printStackTrace();
+    public synchronized void sendMessage(String message, String userGuid) {
+        prepare();
+        Map.Entry<String, Session> entryset = socketManager.getManager().entrySet().stream().filter(entry -> userGuid.equals(entry.getKey())).findAny().orElse(null);
+        try {
+            if (entryset == null) {
+                logger.info(entryset + "NULL ENTRY");
+                return;
             }
+            logger.info("entryset :" + entryset.getKey());
+            logger.info("SEND MESSAGE + " + message);
+            if (entryset.getValue().isOpen()) {
+                logger.info("OPENED SESSION");
+                entryset.getValue().getBasicRemote().sendText(message);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
     @Data
     static class SocketManager {
-//        ILogger logger;
+        ILogger logger = ILogger.getInstance();
         private ConcurrentHashMap<String, Session> manager = new ConcurrentHashMap<>();
 
         public void add(String key, Session webSocketSession) {
-//            logger.info("新添加webSocket连接 {} ", key);
+            logger.info("新添加webSocket连接 {} ", key);
             manager.put(key, webSocketSession);
         }
 
         public void remove(String key) {
-//            logger.info("移除webSocket连接 {} ", key);
+            logger.info("移除webSocket连接 {} ", key);
             manager.remove(key);
         }
 
         public Session get(String key) {
-//            logger.info("获取webSocket连接 {}", key);
+            logger.info("获取webSocket连接 {}", key);
             return manager.get(key);
         }
-
 
 
     }

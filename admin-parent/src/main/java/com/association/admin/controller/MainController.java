@@ -2,6 +2,7 @@ package com.association.admin.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.association.admin.component.RedisUtil;
+import com.association.common.all.util.log.OSSHelper;
 import com.association.user.model.UserDO;
 import com.association.workflow.condition.*;
 import com.association.workflow.enumerations.EnumForApproveStatus;
@@ -22,6 +23,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
@@ -98,7 +100,7 @@ public class MainController extends BasicComponent {
     //创建社团 approveType 传 5
     @PostMapping("addApprove")
     public Proto<Boolean> addApprove(@RequestBody ApproveDO approveDO, HttpServletRequest request) {
-        System.out.println("****************************" + JSONObject.toJSONString(approveDO));
+//        System.out.println("****************************" + JSONObject.toJSONString(approveDO));
         Operator operator = getOperator(request);
         approveDO.setCreateUserGuid(operator.getGuid());
         approveDO.setCreateUserName(operator.getName());
@@ -303,7 +305,7 @@ public class MainController extends BasicComponent {
         Operator operator = getOperator(request);
         activityDO.setCreateUserGuid(operator.getGuid());
         activityDO.setCreateUserName(operator.getName());
-        return getResult( activityIface.createNewActivity(activityDO));
+        return getResult(activityIface.createNewActivity(activityDO));
     }
 
     @PostMapping("queryAssociationUser")
@@ -317,12 +319,32 @@ public class MainController extends BasicComponent {
     }
 
     @PostMapping("quitAssociation")
-    public Proto<Boolean> quitAssociation(@RequestBody AssociationUserDO associationUserDO) {
+    public Proto<Boolean> quitAssociation(@RequestBody AssociationUserDO associationUserDO, HttpServletRequest request) {
+        Operator operator = getOperator(request);
+        ConditionForAssociation condition = new ConditionForAssociation();
+        condition.setAssociationLeaderGuid(operator.getGuid());
+        Proto<List<AssociationDO>> proto = associationIface.queryAssociation(condition);
+        if (!CollectionUtils.isEmpty(proto.getData())) {
+            List<String> guids = proto.getData().stream().map(associationDO -> associationDO.getGuid()).collect(Collectors.toList());
+            if (guids.contains(associationUserDO.getAssociationGuid())) {
+                return fail("作为社长，不能退社");
+            }
+        }
+        associationUserDO.setUserGuid(operator.getGuid());
         return getResult(associationIface.quitAssociation(associationUserDO));
     }
 
+    @PostMapping("isLeader")
+    public Proto<Boolean> isLeader(@RequestBody ConditionForAssociation condition, HttpServletRequest request) {
+        Operator operator = getOperator(request);
+        condition.setAssociationLeaderGuid(operator.getGuid());
+        return associationIface.isLeader(condition);
+    }
+
     @PostMapping("quitActivity")
-    public Proto<Boolean> quitActivity(@RequestBody ConditionForActivityUser activityUserDO) {
+    public Proto<Boolean> quitActivity(@RequestBody ConditionForActivityUser activityUserDO, HttpServletRequest request) {
+        Operator operator = getOperator(request);
+        activityUserDO.setUserGuid(operator.getGuid());
         return getResult(activityIface.quitActivity(activityUserDO));
     }
 
@@ -331,14 +353,51 @@ public class MainController extends BasicComponent {
         return getResult(activityIface.queryActivity(conditionForActivity));
     }
 
-    @PostMapping("createActivity")
-    public Proto<Boolean> createActivity(@RequestBody ActivityDO activityDO) {
-        return getResult(activityIface.createNewActivity(activityDO));
-    }
+//    @PostMapping("createActivity")
+//    public Proto<Boolean> createActivity(@RequestBody ActivityDO activityDO) {
+//        return getResult(activityIface.createNewActivity(activityDO));
+//    }
 
     @PostMapping("joinActivity")
     public Proto<Boolean> joinActivity(@RequestBody ActivityUserDO activityUserDO) {
         return getResult(activityIface.joinActivity(activityUserDO));
+    }
+
+
+    @PostMapping("getAssociation")
+    public Proto<AssociationDO> getAssociation(@RequestBody ConditionForAssociation condition) {
+        return getResult(associationIface.getAssociationSipmle(condition));
+    }
+
+    @PostMapping("addAssociationImage")
+    public Proto<Boolean> addAssociationImage(String associationGuid, MultipartFile file, HttpServletRequest request) {
+        if (StringUtils.isEmpty(associationGuid)) {
+            throw new HttpRequestException("ERROR FOR UPDATE IMAGE", HttpStatus.OK.value());
+        }
+        String filename = UUID.randomUUID().toString().replaceAll("-", "") + ".jpg";
+        if (!OSSHelper.pushFile(file, filename)) {
+            return fail("上传文件失败");
+        }
+        String url = OSSHelper.buildUrl(filename);
+        AssociationDO associationDO = new AssociationDO();
+        associationDO.setAvatarUrl(url);
+        return associationIface.updateAssociation(associationDO);
+    }
+
+    @PostMapping("changeLeader")
+    public Proto<Boolean> changeLeader(@RequestBody AssociationDO associationDO, HttpServletRequest request) {
+        if (associationDO.getGuid() == null || associationDO.getAssociationLeaderGuid() == null) {
+            return fail("参数错误");
+        }
+        Operator opeartor = getOperator(request);
+        ConditionForAssociation condition = new ConditionForAssociation();
+        condition.setGuid(associationDO.getGuid());
+        condition.setAssociationLeaderGuid(opeartor.getGuid());
+        Proto<Boolean> proto = associationIface.isLeader(condition);
+        if (proto == null && !proto.getData()) {
+            return fail("你不是社长嗷铁子");
+        }
+        return associationIface.updateAssociation(associationDO);
     }
 
     public static enum RedisKey {

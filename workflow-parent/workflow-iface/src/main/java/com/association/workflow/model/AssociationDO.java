@@ -17,4 +17,5 @@ public class AssociationDO {
     private String associationLeaderGuid ;
     private Integer schoolId ;
     private String schoolName ;
+    private String leaderName ;
 }
