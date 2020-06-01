@@ -14,7 +14,8 @@ mybatis:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #  config-location: classpath:mybatis-config.xml
-
+server:
+  max-http-header-size: 20480
 user:
   token:
     life: 14

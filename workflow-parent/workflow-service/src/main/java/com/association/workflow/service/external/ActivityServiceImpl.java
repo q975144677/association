@@ -71,8 +71,10 @@ public class ActivityServiceImpl extends BasicComponent implements ActivityIface
     public Proto<Boolean> joinActivity(ActivityUserDO activityUserDO) {
         return getResult(activityUserMapper.save(activityUserDO));
     }
-
-    public static void main(String[] args){
-    System.out.println(11);
+public static void main(String[] args){
+    System.out.println("1.'".indexOf("\\."));
 }
+//    public static void main(String[] args){
+//    System.out.println(11);
+//}
 }

@@ -162,6 +162,12 @@
             <if test="condition.roleGuid != null">
                 and role_guid = #{condition.roleGuid}
             </if>
+            <if test="condition.guids != null and !condition.guids.empty">
+                and guid in
+                <foreach collection="condition.guids" item="item" close=")" open="(" separator=",">
+                    #{item}
+                </foreach>
+            </if>
             <!--            <if test="condition.password != null">-->
             <!--                and password = #{condition.password}-->
             <!--            </if>-->
@@ -173,6 +179,8 @@
                 and create_time &lt; #{condition.to}
             </if>
         </where>
+        <if test="condition.offset != null and condition.limit != null">
         LIMIT #{condition.offset} #{condition.limit}
+        </if>
     </select>
 </mapper>

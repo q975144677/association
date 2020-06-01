@@ -2,6 +2,7 @@ package com.association.workflow.service.external;
 
 import com.alibaba.fastjson.JSONObject;
 import com.association.config.iface.ConfigIface;
+import com.association.config.model.SchoolDTO;
 import com.association.workflow.condition.ConditionForApprove;
 import com.association.workflow.enumerations.EnumForApproveStatus;
 import com.association.workflow.enumerations.EnumForApproveType;
@@ -22,6 +23,7 @@ import component.Proto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
@@ -93,6 +95,20 @@ public class ApproveServiceImpl extends BasicComponent implements ApproveIface {
                 associationDO.setSchoolId(approve.getSchoolId());
 //                associationDO.setSchoolName(approve.getSchoolName());
                 associationDO.setGuid(guid);
+                Proto<SchoolDTO> proto = configIface.schools();
+                if (proto == null || proto.getData() == null) {
+                    return getResult(Boolean.FALSE);
+                }
+                SchoolDTO schoolDTO = proto.getData();
+                if (CollectionUtils.isEmpty(schoolDTO.getAreas())) {
+                    return getResult(Boolean.FALSE);
+                }
+                schoolDTO.getAreas().stream().flatMap(area -> area.getSchools().stream()).forEach(school -> {
+                            if (Integer.valueOf(school.getCode()).equals(associationDO.getSchoolId())) {
+                                associationDO.setSchoolName(school.getName());
+                            }
+                        }
+                );
                 Boolean res = associationMapper.createNewAssociation(associationDO);
 //                Proto<Boolean> proto  = associationIface.createNewAssociation(associationDO);
                if(res){

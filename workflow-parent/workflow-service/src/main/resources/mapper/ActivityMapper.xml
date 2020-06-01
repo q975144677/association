@@ -19,7 +19,11 @@
          delay_reason,
          cancel_reason,
          association_guid,
-         school_id)
+         school_id,
+         from_date ,
+         to_date ,
+         image,
+         place)
         values (#{condition.guid},
                 #{condition.name},
                 now(),
@@ -34,14 +38,20 @@
                 #{condition.delayReason},
                 #{condition.cancelReason},
                 #{condition.associationGuid},
-                #{condition.schoolId})
+                #{condition.schoolId},
+                #{condition.fromDate},
+                #{condition.toDate},
+                #{condition.image},
+                #{condition.place})
     </insert>
     <update id="updateActivity">
         update activity
         <set>
-
+            <if test="condition.place != null">
+                place = #{condition.place}
+            </if>
             <if test="condition.reason != null">
-                reason = #{condition.reason}
+                ,reason = #{condition.reason}
             </if>
             <if test="condition.name != null">
                 , name = #{condition.name}
@@ -58,10 +68,22 @@
             <if test="condition.activityStatus != null">
                 , activity_status = #{condition.activityStatus}
             </if>
+            <if test="condition.fromDate !=  null">
+                , from_date = #{condition.fromDate}
+            </if>
+            <if test="condition.toDate != null">
+                , to_date = #{condition.toDate}
+            </if>
+            <if test="condition.image != null">
+                , image = #{condition.image}
+            </if>
             , update_time = now()
             , update_user_guid = #{condition.updateUserGuid}
             , update_user_name = #{condition.updateUserName}
         </set>
+        <where>
+            guid = #{condition.guid}
+        </where>
     </update>
     <delete id="deleteActivity">
         delete
@@ -75,8 +97,11 @@
         <if test="condition.associationGuid != null">
             association_guid = #{condition.associationGuid}
         </if>
+        <if test="condition.schoolId != null">
+            and school_id = #{condition.schoolId}
+        </if>
         </where>
-        order by update_time desc
+        order by activity_status asc , update_time desc
         LIMIT #{condition.offset} , #{condition.limit}
 </select>
 </mapper>

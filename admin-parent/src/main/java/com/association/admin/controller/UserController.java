@@ -60,7 +60,7 @@ public class UserController extends BasicComponent {
     @TokenCheck(false)
     @PostMapping("register")
     public Proto<?> register(@RequestBody UserDO userDO) {
-        return getResult(userIface.register(userDO));
+        return userIface.register(userDO);
     }
 
     @TokenCheck(false)
@@ -81,6 +81,7 @@ public class UserController extends BasicComponent {
         }
         redis.del(String.join(":", MainController.RedisKey.DEFAULT_CODE.name(), userName));
         ConditionForUser condition = new ConditionForUser();
+        condition.setMobilePhone(userName);
         Proto<UserDO> loginUserResult = userIface.getUser(condition);
         String token = "登录失败";
         if (loginUserResult != null && loginUserResult.getData() != null) {
@@ -185,7 +186,7 @@ public class UserController extends BasicComponent {
     public Proto<Boolean> addAvatar(MultipartFile file, HttpServletRequest request) {
 //        logger.info("File:{}",file.getName());
   //      logger.info("FILE IN FILE IN FILE : {} " , file.getSize());
-    String filename = UUID.randomUUID().toString().replaceAll("-","")+".jpg";
+        String filename = UUID.randomUUID().toString().replaceAll("-","")+".jpg";
         if (!OSSHelper.pushFile(file,filename)) {
             return fail("上传文件失败");
         }
@@ -242,6 +243,7 @@ public class UserController extends BasicComponent {
         condition.setGuid(guid);
         return userIface.getUser(condition);
     }
+
     private String getRandomCode(int count) {
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < count; i++) {

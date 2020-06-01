@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -53,6 +54,9 @@ public class UserKeeper {
     public Boolean register(UserDO userDO) {
         if(StringUtils.isEmpty(userDO.getPassword())){
            throw new RuntimeException("password do not exist");
+        }
+        if(StringUtils.isEmpty(userDO.getName())){
+            userDO.setName(new StringBuilder("游客").append(":").append(UUID.randomUUID().toString().replaceAll("-","").substring(0,6).toString()).toString());
         }
         userDO.setPassword(BCrypt.hashpw(userDO.getPassword(),BCrypt.gensalt()));
         Boolean res = userMapper.createNewUser(userDO);

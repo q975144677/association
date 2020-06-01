@@ -2,7 +2,9 @@ package com.association.workflow.model;
 
 import com.association.workflow.enumerations.EnumForActivityStatus;
 import com.association.workflow.enumerations.EnumForApproveStatus;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -10,7 +12,12 @@ import java.util.Date;
 public class ActivityDO {
     private String guid ;
     private String name ;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime ;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime ;
     private Integer schoolId ;
     private String createUserGuid;
@@ -21,7 +28,14 @@ public class ActivityDO {
     private String detail ;
     private Integer activityStatus;
     private String associationGuid ;
+    private String place ;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date fromDate ;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date toDate ;
     private String delayReason ;
     private String cancelReason ;
@@ -30,7 +44,7 @@ public class ActivityDO {
     private String payAccount ;
     private Integer payType ;
     private Integer approveStatus ;
-
+    private String image ;
     public String getApproveStatusName() {
         return approveStatus == null ? null : EnumForApproveStatus.parse(approveStatus).getInfo();
     }

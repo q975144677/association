@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 @Configuration
 public class ILogger {
+
     public static ILogger getInstance(){
         return new ILogger();
     }

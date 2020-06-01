@@ -2,10 +2,12 @@ spring:
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: jdbc:mysql://localhost:3306/association?characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/association?useUnicode=true&characterEncoding=utf8
     username: root
     password: admin
     driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      init-s-q-l: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
 mybatis:
   mapper-locations:
     - classpath:mapper/*.xml

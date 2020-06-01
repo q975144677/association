@@ -34,7 +34,25 @@
         #{condition.schoolName}
         )
     </insert>
-    <update id="updateAssociation"></update>
+    <update id="updateAssociation">
+        update
+        association
+        <set>
+            <if test="condition.associationLeaderGuid != null">
+                association_leader_guid = #{condition.associationLeaderGuid}
+            </if>
+            <if test="condition.subContent != null">
+                ,sub_content = #{condition.subContent}
+            </if>
+            <if test="condition.avatarUrl != null">
+                ,avatar_url = #{condition.avatarUrl}
+            </if>
+        </set>
+        <where>
+            guid = #{condition.guid}
+        </where>
+
+    </update>
     <delete id="deleteAssociation"></delete>
     <select id="countAssociation" resultType="java.lang.Long">
         select count(1) from association

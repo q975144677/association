@@ -1,5 +1,6 @@
 package com.association.user.service;
 
+import com.alibaba.fastjson.JSONObject;
 import com.association.common.all.util.log.ILogger;
 import com.association.user.component.RedisKeyEnum;
 import com.association.user.component.RedisLock;
@@ -67,6 +68,14 @@ public class UserServiceImpl extends BasicService implements UserIface {
             logger.info("userDO : {}" , userDO);
             if(userDO != null){
                 result = "呜呜呜，账户好像被注册了";
+                break Label;
+            }
+            ConditionForUser conditionForUser1 = new ConditionForUser();
+            conditionForUser1.setMobilePhone(condition.getMobilePhone());
+            UserDO userDo2 = userKeeper.getUser(conditionForUser1);
+            logger.info("USERDO FOR MOBILE {}", JSONObject.toJSONString(userDo2));
+            if(userDo2 != null){
+                result =  "呜呜呜，手机号好像被注册了";
                 break Label;
             }
             Boolean create = userKeeper.register(condition);
@@ -152,14 +161,14 @@ public class UserServiceImpl extends BasicService implements UserIface {
     public Proto<Boolean> refrushToken(String token) {
         UserDO userDO = userKeeper.getUserByToken(token);
         if(userDO == null){
-            return getResult(false);
+            return getResult(Boolean.FALSE);
         }
         String guid = userDO.getGuid();
         ConditionForUser conditionForUser = new ConditionForUser();
         conditionForUser.setGuid(guid);
         UserDO userNew = userKeeper.getUser(conditionForUser);
         if(userNew == null){
-            return getResult(false);
+            return getResult(Boolean.FALSE);
         }
         // refrush redis ;
         String key = String.format(RedisKeyEnum.USER_TOKEN.getPattern(), token);

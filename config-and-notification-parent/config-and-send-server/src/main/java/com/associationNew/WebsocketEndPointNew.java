@@ -89,9 +89,6 @@ public class WebsocketEndPointNew {
             logger.error("SOMETHING ERROR : {}", e.getMessage());
             return;
         }
-//        session.getBasicRemote().sendText("t"); session.getBasicRemote().sendText("t");
-
-//        sendMessage("123", "d72886a83d2611ea85e78c04ba0c3a6d");
     }
 
 
@@ -159,8 +156,6 @@ public class WebsocketEndPointNew {
             logger.info("获取webSocket连接 {}", key);
             return manager.get(key);
         }
-
-
     }
 }
 

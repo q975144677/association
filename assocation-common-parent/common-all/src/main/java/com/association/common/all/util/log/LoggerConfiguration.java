@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class LoggerConfiguration {
 @Value("${spring.application.name}")
-private String appName = "UNKNOWN" ;
+    private String appName = "UNKNOWN" ;
 }

@@ -42,6 +42,9 @@ public class AuthInterceptorNew implements HandlerInterceptor {
     ConfigIface configIface;
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        if(!(handler instanceof  HandlerMethod)){
+            return false;
+        }
         HandlerMethod handlerMethod = (HandlerMethod) handler;
         Method method = handlerMethod.getMethod();
         System.out.println("--------");
@@ -57,6 +60,7 @@ public class AuthInterceptorNew implements HandlerInterceptor {
             throw new HttpRequestException("请登录",401);
         }
         Proto<UserDO> userResult = userIface.getUserByToken(token);
+        System.out.println(token + "REDIS : {} " + JSONObject.toJSONString(userResult));
         if(userResult != null && userResult.getData() != null){
             UserDO user=  userResult.getData();
             System.out.println(JSONObject.toJSONString(user));

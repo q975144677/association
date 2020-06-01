@@ -2,9 +2,13 @@ package com.association.admin.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.association.admin.component.RedisUtil;
+import com.association.common.all.util.log.ILogger;
 import com.association.common.all.util.log.OSSHelper;
+import com.association.config.iface.ConfigIface;
+import com.association.config.model.SchoolDTO;
 import com.association.user.model.UserDO;
 import com.association.workflow.condition.*;
+import com.association.workflow.enumerations.EnumForActivityStatus;
 import com.association.workflow.enumerations.EnumForApproveStatus;
 import com.association.workflow.enumerations.EnumForApproveType;
 import com.association.workflow.iface.ActivityIface;
@@ -43,6 +47,10 @@ public class MainController extends BasicComponent {
     RedisUtil redis;
     @Autowired
     UserIface userIface;
+    @Autowired
+    ILogger logger;
+    @Autowired
+    ConfigIface configIface;
 
     public static final int time = 5 * 60;
 
@@ -70,13 +78,21 @@ public class MainController extends BasicComponent {
     public Proto<?> createNewActivity(@RequestBody ActivityDO activityDO, HttpServletRequest request) {
 
         Operator operator = getOperator(request);
+        activityDO.setActivityStatus(EnumForActivityStatus.STARTING.getCode());
         activityDO.setUpdateUserGuid(operator.getGuid());
         activityDO.setUpdateUserName(operator.getName());
         activityDO.setCreateUserGuid(operator.getGuid());
         activityDO.setCreateUserName(operator.getName());
         return getResult(activityIface.createNewActivity(activityDO));
     }
-
+@PostMapping("finishActivity")
+public Proto<Boolean> finishActivity(@RequestBody ActivityDO activityDO){
+        if(StringUtils.isEmpty(activityDO.getGuid())){
+            throwDefaultHttpRequestException();
+        }
+        activityDO.setActivityStatus(EnumForActivityStatus.END.getCode());
+        return activityIface.updateActivity(activityDO);
+}
     @PostMapping("updateActivity")
     public Proto<?> updateActivity(@RequestBody ActivityDO activityDO, HttpServletRequest request) {
         if (StringUtils.isEmpty(activityDO.getGuid())) {
@@ -85,15 +101,28 @@ public class MainController extends BasicComponent {
         Operator operator = getOperator(request);
         activityDO.setUpdateUserGuid(operator.getGuid());
         activityDO.setUpdateUserName(operator.getName());
-        return getResult(activityDO);
+        return getResult(activityIface.updateActivity(activityDO));
     }
 
     @PostMapping("createAssociation")
     public Proto<?> createAssociation(@RequestBody AssociationDO associationDO, HttpServletRequest request) {
-
         Operator operator = getOperator(request);
         associationDO.setCreateUserGuid(operator.getGuid());
         associationDO.setCreateUserName(operator.getName());
+        Proto<SchoolDTO> proto = configIface.schools();
+        if (proto == null || proto.getData() == null) {
+            return getResult(Boolean.FALSE);
+        }
+        SchoolDTO schoolDTO = proto.getData();
+        if (CollectionUtils.isEmpty(schoolDTO.getAreas())) {
+            return getResult(Boolean.FALSE);
+        }
+        schoolDTO.getAreas().stream().flatMap(area -> area.getSchools().stream()).forEach(school -> {
+                    if (Integer.valueOf(school.getCode()).equals(associationDO.getSchoolId())) {
+                        associationDO.setSchoolName(school.getName());
+                    }
+                }
+        );
         return getResult(associationIface.createNewAssociation(associationDO));
     }
 
@@ -302,6 +331,7 @@ public class MainController extends BasicComponent {
 
     @PostMapping("createActivity")
     public Proto<Boolean> createActivity(@RequestBody ActivityDO activityDO, HttpServletRequest request) {
+        logger.info("JSON ACTIVITY : {} ", JSONObject.toJSONString(activityDO));
         Operator operator = getOperator(request);
         activityDO.setCreateUserGuid(operator.getGuid());
         activityDO.setCreateUserName(operator.getName());
@@ -398,6 +428,32 @@ public class MainController extends BasicComponent {
             return fail("你不是社长嗷铁子");
         }
         return associationIface.updateAssociation(associationDO);
+    }
+    @PostMapping("uploadImage")
+    public Proto<String> uploadImage(MultipartFile file){
+        String filename = UUID.randomUUID().toString().replaceAll("-", "") + ".jpg";
+        if (!OSSHelper.pushFile(file, filename)) {
+            return fail("上传文件失败");
+        }
+        return getResult(OSSHelper.buildUrl(filename));
+    }
+//    @PostMapping("updateActivity")
+//    public Proto<Boolean> updateActivity(@RequestBody ActivityDO activity){
+//        return activityIface.updateActivity(activity);
+//    }
+    @PostMapping("addAssociationAvatar")
+    public Proto<Boolean> addAssociationAvatar(MultipartFile file, AssociationDO association) {
+        String filename = UUID.randomUUID().toString().replaceAll("-", "") + ".jpg";
+        if (!OSSHelper.pushFile(file, filename)) {
+            return fail("上传文件失败");
+        }
+        if (association == null || StringUtils.isEmpty(association.getGuid())) {
+            ILogger.getInstance().info("PARAM ERROR : {} ", JSONObject.toJSONString(association));
+            return getResult(Boolean.FALSE);
+        }
+        association.setAvatarUrl(OSSHelper.buildUrl(filename));
+        associationIface.updateAssociation(association);
+        return getResult(Boolean.TRUE);
     }
 
     public static enum RedisKey {
