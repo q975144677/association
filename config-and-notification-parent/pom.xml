@@ -28,7 +28,7 @@
         <nacos-config-version>0.2.1.RELEASE</nacos-config-version>
         <workflow-version>${parent.version}</workflow-version>
         <mybatis-version>2.0.0</mybatis-version>
-        <mysql-version>5.1.21</mysql-version>
+        <mysql-version>8.0.28</mysql-version>
         <bcrypt-version>0.8.0</bcrypt-version>
     </properties>
     <dependencyManagement>
